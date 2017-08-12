@@ -1,0 +1,36 @@
+@import "colors"
+nav
+  a
+    position: absolute
+    top: 40px
+    right: 40px
+    background-color: white
+    height: 40px
+    width: 40px
+a
+  font-size: 20px
+  color: tomato !important
+  text-decoration: none
+  color: $primary-color !important
+  background-color: grey
+.color-container
+  margin: 100px 0
+.box
+  height: 140px
+  width: 140px
+  display: inline-block
+  margin: 2px
+  transition: 0.2s
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.1)
+  &:hover
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.4)
+    opacity: 0.9
+    transform: translateY(-2px)
+
+
+.red
+  background-color: red
+.green
+  background-color: green
+.blue
+  background-color: blue
