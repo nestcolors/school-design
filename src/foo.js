@@ -1,5 +1,7 @@
-export function dummyFoo() {
-  console.log('hello i`m foo!');
+export const dummyFoo = () => {
+  const hello = 'hello i`m foo!'
+
+  console.log(hello);
   document.getElementById('text-injection').innerHTML = 'hello from the other side!';
 }
 
