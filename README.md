@@ -1,9 +1,9 @@
 # school-design
 
-1 step - install node & npm
-2 step - > npm install
-3 step - > node server.js
-4 step - > npm start
+how to launch application
+-----------
 
-
-start server - 
+- 1 step - install node & npm // install node
+- 2 step - > npm install // install all app dependencies
+- 3 step - > node server.js // start serving files on localhost:8080/
+- 4 step - > npm start // start webpack
