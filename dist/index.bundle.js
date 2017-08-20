@@ -10690,16 +10690,19 @@ function updateLink (link, options, obj) {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__foo_js__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__scripts_courses_list_js__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__scripts_home_page_js__ = __webpack_require__(5);
 
 
-__webpack_require__(5);
-__webpack_require__(9);
+
+__webpack_require__(6);
 
 console.log('i`m index js file');
 
-console.log('courses-list: ', window.location.pathname);
+console.log(window.location.pathname);
 if (window.location.pathname === '/courses-list.html') {
   Object(__WEBPACK_IMPORTED_MODULE_1__scripts_courses_list_js__["a" /* default */])();
+} else if (window.location.pathname === '/home-page.html') {
+  Object(__WEBPACK_IMPORTED_MODULE_2__scripts_home_page_js__["a" /* default */])();
 } else {
   Object(__WEBPACK_IMPORTED_MODULE_0__foo_js__["a" /* dummyFoo */])();
 }
@@ -10772,12 +10775,58 @@ var coursesList = function coursesList() {
 
 /***/ }),
 /* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);
+
+
+var homePage = function homePage() {
+  console.log('homePage');
+  var main_menu = __WEBPACK_IMPORTED_MODULE_0_jquery___default()("#js-main-menu");
+
+  main_menu.find('.cr-panel__item-title').click(function (event) {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).siblings(".cr-panel__item-content").toggleClass('mod-open');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).toggleClass('mod-active');
+  });
+
+  main_menu.find('.cr-hover-menu').hover(function (event) {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).find(".cr-hover-menu__content").toggleClass('mod-open');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).find(".cr-hover-menu__title").toggleClass('mod-active');
+  });
+
+  main_menu.find('.cr-accordeon__title').click(function (event) {
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).toggleClass('mod-active');
+    __WEBPACK_IMPORTED_MODULE_0_jquery___default()(this).siblings(".cr-accordeon__content").toggleClass('mod-open');
+  });
+
+  var body = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('body');
+  var header = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('#js-header');
+  var header_fixed_part = header.find('.cr-header__fixed-part');
+  var motto_height = header.find('.cr-header__motto').outerHeight();
+  console.log(motto_height);
+  __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).scroll(function (event) {
+    var scroll = __WEBPACK_IMPORTED_MODULE_0_jquery___default()(window).scrollTop();
+    if (scroll >= motto_height) {
+      header_fixed_part.addClass('mod-fixed');
+      // body.addClass('header-is-fixed')
+    } else {
+      header_fixed_part.removeClass('mod-fixed');
+      // body.removeClass('header-is-fixed')
+    }
+  });
+};
+/* harmony default export */ __webpack_exports__["a"] = (homePage);
+
+/***/ }),
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(6);
+var content = __webpack_require__(7);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -10802,99 +10851,17 @@ if(false) {
 }
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(7)(undefined);
+exports = module.exports = __webpack_require__(11)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "body {\n  font: 100% sans-serif;\n  color: white;\n  background-color: tomato;\n  margin: 0; }\n\n.root {\n  padding: 30px 50px;\n  display: none; }\n  .root h1 {\n    color: white; }\n  .root h3 {\n    color: #ddd; }\n", ""]);
+exports.push([module.i, "@font-face {\n  font-family: \"Proxima Light\";\n  src: url(\"/src/fonts/Proxima Nova Light.otf\"); }\n\n@font-face {\n  font-family: \"Proxima Regular\";\n  src: url(\"/src/fonts/Proxima Nova Regular.otf\"); }\n\n@font-face {\n  font-family: \"Proxima Semibold\";\n  src: url(\"/src/fonts/Proxima Nova Semibold.otf\"); }\n\n@font-face {\n  font-family: \"Proxima Bold\";\n  src: url(\"/src/fonts/Proxima Nova Bold.otf\"); }\n\nh1, .cr-section__header {\n  font-family: \"Proxima Bold\";\n  font-size: 65px;\n  color: #131313; }\n\nh2, .cr-section__header-top {\n  font-family: \"Proxima Regular\";\n  font-size: 20px;\n  color: #929292; }\n\nh3 {\n  font-family: \"Proxima Bold\";\n  font-size: 18px;\n  color: #131313; }\n\nh4 {\n  font-family: \"Proxima Semibold\";\n  font-size: 16px;\n  color: #131313; }\n\nh5 {\n  font-family: \"Proxima Regular\";\n  font-size: 14px;\n  color: #131313; }\n\n.t-a-center {\n  text-align: center; }\n\n.t-a-left {\n  text-align: left; }\n\n.t-bold {\n  font-family: \"Proxima Bold\"; }\n\n.tc-mint {\n  color: #7dc5ba; }\n\n.mod-with-mint-bg {\n  display: inline-block;\n  background-color: #7dc5ba; }\n\nbody {\n  color: #131313;\n  font-family: \"Proxima Light\";\n  padding-top: 117px; }\n\n.cr-horizontal-list {\n  list-style: none;\n  padding-left: 0; }\n\n.cr-horizontal-list__item {\n  display: inline-block; }\n\n.cr-header {\n  position: absolute;\n  top: 0;\n  width: 100%;\n  background: #fff;\n  z-index: 10; }\n  .cr-header .cr-horizontal-list {\n    margin-top: 25px; }\n  .cr-header .cr-horizontal-list__item + .cr-horizontal-list__item {\n    margin-left: 40px; }\n\n.cr-header__link {\n  padding: 3px 5px;\n  font-size: 14px;\n  color: #080808;\n  font-family: \"Proxima Regular\";\n  text-transform: uppercase; }\n  .cr-header__link:hover, .cr-header__link.mod-active {\n    text-decoration: none;\n    border-bottom: 2px solid #131313; }\n\n.cr-header__motto {\n  text-align: center;\n  color: #929292;\n  padding-top: 10px;\n  padding-bottom: 15px;\n  font-size: 14px;\n  line-height: 27px;\n  letter-spacing: .4px; }\n\n.cr-header__fixed-part {\n  background-color: #FFF;\n  border-bottom: 4px solid #080808;\n  height: 65px;\n  position: relative;\n  width: 100%; }\n  .cr-header__fixed-part.mod-fixed {\n    position: fixed;\n    top: 0; }\n\n.cr-header__logo {\n  position: absolute;\n  left: 50%;\n  top: 50%;\n  transform: translate(-50%, -50%); }\n\nbody.header-is-fixed {\n  padding-top: 65px; }\n\n.cr-button, .cr-button--vertical {\n  border: 2px solid #131313;\n  padding: 10px 70px 10px 20px;\n  line-height: 1;\n  font-size: 16px;\n  background: none;\n  font-family: \"Proxima Bold\";\n  position: relative;\n  letter-spacing: 1.6px; }\n  .cr-button:after, .cr-button--vertical:after {\n    content: '';\n    position: absolute;\n    right: 15px;\n    top: 21px;\n    border-top: 1px solid #080808;\n    width: 34px; }\n  .cr-button:before, .cr-button--vertical:before {\n    content: '';\n    position: absolute;\n    right: 15px;\n    top: 18px;\n    width: 8px;\n    height: 8px;\n    border-top: 1px solid #080808;\n    border-right: 1px solid #080808;\n    transform: rotate(45deg); }\n  .cr-button.mod-white, .mod-white.cr-button--vertical {\n    border-color: #fff; }\n    .cr-button.mod-white:after, .mod-white.cr-button--vertical:after, .cr-button.mod-white:before, .mod-white.cr-button--vertical:before {\n      border-color: #fff; }\n\n.cr-button--vertical {\n  width: 58px;\n  height: 126px;\n  padding: 0;\n  position: relative; }\n  .cr-button--vertical .cr-button__label {\n    position: absolute;\n    top: 35px;\n    white-space: nowrap;\n    left: 50%;\n    transform: translate(-50%, 0);\n    letter-spacing: 9.6px;\n    font-size: 16px;\n    text-transform: uppercase;\n    font-family: \"Proxima Bold\"; }\n  .cr-button--vertical:after {\n    border-top: none;\n    border-left: 1px solid #080808;\n    width: 0;\n    height: 34px;\n    right: 25.5px;\n    bottom: 15px;\n    top: auto; }\n  .cr-button--vertical:before {\n    transform: rotate(135deg);\n    right: 22px;\n    bottom: 15px;\n    top: auto; }\n\n.cr-section {\n  margin-top: 70px; }\n\n.cr-section__header {\n  text-transform: uppercase;\n  letter-spacing: 13px;\n  margin-bottom: 30px; }\n\n.cr-section__header-top {\n  text-transform: uppercase;\n  letter-spacing: 2px;\n  font-family: \"Proxima Bold\"; }\n\n.cr-main-menu-wrapper {\n  background-color: #fbf7f6;\n  position: absolute;\n  top: 40px; }\n\n.cr-panel {\n  font-family: \"Proxima Regular\";\n  width: 280px;\n  padding-left: 80px;\n  color: #080808;\n  margin-top: 16px; }\n\n.cr-panel__item {\n  position: relative; }\n\n.cr-panel__item-title {\n  cursor: pointer;\n  background-color: #e8e8e8;\n  font-family: \"Proxima Bold\";\n  text-transform: uppercase;\n  padding: 4px 14px;\n  font-size: 16px;\n  transition: background-color .5s;\n  position: relative;\n  line-height: 1;\n  letter-spacing: 3.2px; }\n  .cr-panel__item-title:after {\n    content: '';\n    position: absolute;\n    right: 9px;\n    top: 9px;\n    width: 8px;\n    height: 8px;\n    transform: rotate(-45deg);\n    border-bottom: 1px solid #080808;\n    border-left: 1px solid #080808; }\n  .cr-panel__item-title.mod-active {\n    background-color: #fff450; }\n\n.cr-panel__item-content {\n  margin: 4px 0;\n  padding-left: 0;\n  max-height: 0;\n  overflow: hidden;\n  transition: max-height 0.5s ease-out;\n  list-style: none; }\n  .cr-panel__item-content.mod-open {\n    height: auto;\n    max-height: 300px;\n    overflow: visible; }\n\n.cr-hover-menu {\n  padding-left: 57px;\n  position: relative; }\n\n.cr-hover-menu__title {\n  padding-top: 10px;\n  padding-bottom: 3px;\n  font-size: 16px;\n  font-family: \"Proxima Regular\";\n  cursor: pointer; }\n  .cr-hover-menu__title.mod-active {\n    font-weight: bold; }\n\n.cr-hover-menu__content {\n  position: absolute;\n  top: -6px;\n  left: 100%;\n  opacity: 0;\n  padding: 0;\n  background-color: #fbf7f6;\n  transition: all .5s;\n  list-style: none;\n  display: none;\n  font-size: 16px; }\n  .cr-hover-menu__content.mod-open {\n    opacity: 1;\n    width: 257px;\n    padding: 11px 0 11px 40px;\n    display: block; }\n\n.cr-accordeon {\n  padding-bottom: 3px; }\n\n.cr-accordeon__title {\n  padding: 0 10px;\n  margin: 5px 0;\n  cursor: pointer;\n  display: inline-block; }\n  .cr-accordeon__title.mod-active {\n    background-color: #fff450; }\n\n.cr-accordeon__content {\n  max-height: 0;\n  overflow: hidden;\n  transition: max-height 0.5s ease-out; }\n  .cr-accordeon__content.mod-open {\n    height: auto;\n    max-height: 300px; }\n\n.cr-menu-list {\n  list-style: none;\n  margin-left: 48px;\n  margin-top: 0;\n  padding: 0; }\n\n.cr-menu-list__item a {\n  padding: 5px 0;\n  color: #080808;\n  text-decoration: none; }\n\n.cr-menu-list__item:hover {\n  font-weight: 600; }\n\n.cr-hero {\n  max-height: 620px;\n  overflow: hidden;\n  position: relative; }\n  .cr-hero .cr-button--vertical {\n    position: absolute;\n    bottom: 26px;\n    left: 50%;\n    transform: translate(-50%); }\n\n.cr-hero-video {\n  width: 100%; }\n\n.cr-white-table {\n  width: 100%;\n  font-size: 16px;\n  margin-bottom: 20px; }\n  .cr-white-table th {\n    padding-bottom: 15px;\n    font-size: 16px; }\n  .cr-white-table tbody td {\n    padding-bottom: 40px;\n    vertical-align: top; }\n\n.cr-table__row-caption {\n  font-family: \"Proxima Bold\";\n  font-size: 16px;\n  padding-right: 155px;\n  text-align: right;\n  letter-spacing: 1.8px; }\n  .cr-table__row-caption div {\n    padding-left: 39px;\n    padding-right: 16px; }\n\n.t-col--400 {\n  width: 400px; }\n", ""]);
 
 // exports
-
-
-/***/ }),
-/* 7 */
-/***/ (function(module, exports) {
-
-/*
-	MIT License http://www.opensource.org/licenses/mit-license.php
-	Author Tobias Koppers @sokra
-*/
-// css base code, injected by the css-loader
-module.exports = function(useSourceMap) {
-	var list = [];
-
-	// return the list of modules as css string
-	list.toString = function toString() {
-		return this.map(function (item) {
-			var content = cssWithMappingToString(item, useSourceMap);
-			if(item[2]) {
-				return "@media " + item[2] + "{" + content + "}";
-			} else {
-				return content;
-			}
-		}).join("");
-	};
-
-	// import a list of modules into the list
-	list.i = function(modules, mediaQuery) {
-		if(typeof modules === "string")
-			modules = [[null, modules, ""]];
-		var alreadyImportedModules = {};
-		for(var i = 0; i < this.length; i++) {
-			var id = this[i][0];
-			if(typeof id === "number")
-				alreadyImportedModules[id] = true;
-		}
-		for(i = 0; i < modules.length; i++) {
-			var item = modules[i];
-			// skip already imported module
-			// this implementation is not 100% perfect for weird media query combinations
-			//  when a module is imported multiple times with different media queries.
-			//  I hope this will never occur (Hey this way we have smaller bundles)
-			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-				if(mediaQuery && !item[2]) {
-					item[2] = mediaQuery;
-				} else if(mediaQuery) {
-					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-				}
-				list.push(item);
-			}
-		}
-	};
-	return list;
-};
-
-function cssWithMappingToString(item, useSourceMap) {
-	var content = item[1] || '';
-	var cssMapping = item[3];
-	if (!cssMapping) {
-		return content;
-	}
-
-	if (useSourceMap && typeof btoa === 'function') {
-		var sourceMapping = toComment(cssMapping);
-		var sourceURLs = cssMapping.sources.map(function (source) {
-			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
-		});
-
-		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
-	}
-
-	return [content].join('\n');
-}
-
-// Adapted from convert-source-map (MIT)
-function toComment(sourceMap) {
-	// eslint-disable-next-line no-undef
-	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
-	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
-
-	return '/*# ' + data + ' */';
-}
 
 
 /***/ }),
@@ -10993,48 +10960,87 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 9 */,
+/* 10 */,
+/* 11 */
+/***/ (function(module, exports) {
 
-// style-loader: Adds some css to the DOM by adding a <style> tag
+/*
+	MIT License http://www.opensource.org/licenses/mit-license.php
+	Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+module.exports = function(useSourceMap) {
+	var list = [];
 
-// load the styles
-var content = __webpack_require__(10);
-if(typeof content === 'string') content = [[module.i, content, '']];
-// Prepare cssTransformation
-var transform;
+	// return the list of modules as css string
+	list.toString = function toString() {
+		return this.map(function (item) {
+			var content = cssWithMappingToString(item, useSourceMap);
+			if(item[2]) {
+				return "@media " + item[2] + "{" + content + "}";
+			} else {
+				return content;
+			}
+		}).join("");
+	};
 
-var options = {}
-options.transform = transform
-// add the styles to the DOM
-var update = __webpack_require__(1)(content, options);
-if(content.locals) module.exports = content.locals;
-// Hot Module Replacement
-if(false) {
-	// When the styles change, update the <style> tags
-	if(!content.locals) {
-		module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./courses-list.sass", function() {
-			var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/lib/loader.js!./courses-list.sass");
-			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-			update(newContent);
-		});
+	// import a list of modules into the list
+	list.i = function(modules, mediaQuery) {
+		if(typeof modules === "string")
+			modules = [[null, modules, ""]];
+		var alreadyImportedModules = {};
+		for(var i = 0; i < this.length; i++) {
+			var id = this[i][0];
+			if(typeof id === "number")
+				alreadyImportedModules[id] = true;
+		}
+		for(i = 0; i < modules.length; i++) {
+			var item = modules[i];
+			// skip already imported module
+			// this implementation is not 100% perfect for weird media query combinations
+			//  when a module is imported multiple times with different media queries.
+			//  I hope this will never occur (Hey this way we have smaller bundles)
+			if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+				if(mediaQuery && !item[2]) {
+					item[2] = mediaQuery;
+				} else if(mediaQuery) {
+					item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+				}
+				list.push(item);
+			}
+		}
+	};
+	return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+	var content = item[1] || '';
+	var cssMapping = item[3];
+	if (!cssMapping) {
+		return content;
 	}
-	// When the module is disposed, remove the <style> tags
-	module.hot.dispose(function() { update(); });
+
+	if (useSourceMap && typeof btoa === 'function') {
+		var sourceMapping = toComment(cssMapping);
+		var sourceURLs = cssMapping.sources.map(function (source) {
+			return '/*# sourceURL=' + cssMapping.sourceRoot + source + ' */'
+		});
+
+		return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+	}
+
+	return [content].join('\n');
 }
 
-/***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+// Adapted from convert-source-map (MIT)
+function toComment(sourceMap) {
+	// eslint-disable-next-line no-undef
+	var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+	var data = 'sourceMappingURL=data:application/json;charset=utf-8;base64,' + base64;
 
-exports = module.exports = __webpack_require__(7)(undefined);
-// imports
-
-
-// module
-exports.push([module.i, "nav a {\n  position: absolute;\n  top: 40px;\n  right: 40px;\n  background-color: white;\n  height: 40px;\n  width: 40px; }\n\na {\n  font-size: 20px;\n  color: tomato !important;\n  text-decoration: none;\n  color: white !important;\n  background-color: grey; }\n\n.color-container {\n  margin: 100px 0; }\n\n.box {\n  height: 140px;\n  width: 140px;\n  display: inline-block;\n  margin: 2px;\n  transition: 0.2s;\n  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1); }\n  .box:hover {\n    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);\n    opacity: 0.9;\n    transform: translateY(-2px); }\n\n.red {\n  background-color: red; }\n\n.green {\n  background-color: green; }\n\n.blue {\n  background-color: blue; }\n", ""]);
-
-// exports
+	return '/*# ' + data + ' */';
+}
 
 
 /***/ })
