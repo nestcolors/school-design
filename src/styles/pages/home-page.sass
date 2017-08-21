@@ -2,6 +2,8 @@
   max-height: 620px
   overflow: hidden
   position: relative
+  @include media(mobile)
+    height: 415px
   .cr-button--vertical
     position: absolute
     bottom: 26px
@@ -9,30 +11,151 @@
     transform: translate(-50%)
 .cr-hero-video
   width: 100%
-
-
+  @include media(mobile)
+  width: auto
 .cr-white-table
   width: 100%
   font-size: 16px
   margin-bottom: 20px
+  @include media(mobile)
+    thead
+      display: none
+    &, tbody, tr, td
+      display: block
   th
     padding-bottom: 15px
     font-size: 16px
   tbody
+    @include media(to_tablet)
+      background-color: #F6F2F2
+      border-top: 10px solid #F6F2F2
+      border-bottom: 21px solid $white
+    @include media(mobile)
+      padding-left: 30px
     td
       padding-bottom: 40px
       vertical-align: top
 .cr-table__row-caption
   font-family: $bold
-  font-size: 16px
+  font-size: 18px
   padding-right: 155px
   text-align: right
   letter-spacing: 1.8px
+  @include media(mobile)
+    padding-right: 0
+    text-align: left
   div
     padding-left: 39px
     padding-right: 16px
+    @include media(mobile)
+      padding-left: 0
 .t-col--400
   width: 400px
+.cr-cell-label
+  font-size: 16px
+  font-family: $light
+  font-weight: bold
+  padding-right: 5px
 
+.cr-quote
+  display: inline-block
+  position: relative
+  @extend h1
+  text-transform: uppercase
+  margin: 0
+  letter-spacing: 13px
+  max-width: 745px
+  line-height: 1.2
+  @include media(tablet)
+    max-width: 582px
+  @include media(mobile)
+    max-width: 290px
+    letter-spacing: 6px
+    width: 100%
+  .mod-accent
+    position: relative
+    &:after
+      content: ''
+      background-color: $mint
+      position: absolute
+      z-index: -1
+      width: 1000%
+      height: 62px
+      right: 9px
+      top: 8px
+      @include media(mobile)
+        max-width: 730px
+  &:before
+    content: ''
+    width: 288px
+    height: 293px
+    background-color: $light_gray
+    position: absolute
+    top: -70px
+    left: -50px
+    z-index: -1
+    opacity: .05
+    @include media(mobile)
+      left: -125px
+.cr-quote__author
+  @extend h2
+  position: relative
+  text-align: right
+  right: -20%
+  margin-top: 30px
+  letter-spacing: 2px
+  font-family: $bold
+  @include media(mobile)
+    right: 0
 
+.cr-dh-logo
+  padding-top: 90px
+  padding-bottom: 21px
+  @include media(mobile)
+    padding-top: 0
 
+.cr-map
+  height: 280px
+  background-image: url(/src/images/map.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  text-align: center
+  padding-top: 50px
+  @include media(mobile)
+    background-position: 70%
+.cr-map__small-header
+  @extend h2
+  text-transform: uppercase
+  font-family: $bold
+.cr-map__big-header
+  @extend h1
+  color: #fff
+  text-transform: uppercase
+  line-height: 1.2
+  letter-spacing: 13px
+  @include media(mobile)
+    letter-spacing: 2px
+
+.cr-footer
+  background-color: $dark
+  padding-top: 20px
+  .cr-horizontal-list
+    margin: 5px 0 0 0
+    display: inline-block
+    color: $white
+    .cr-horizontal-list__item + .cr-horizontal-list__item
+      margin-left: 10px
+
+.cr-social-list
+  margin: 0
+  padding: 0
+  list-style: none
+
+.cr-social-list__item
+  display: inline-block
+
+.cr-footer__copyright
+  font-size: 14px
+  color: rgba(255, 255, 255, 0.5)
+  text-align: center
+  padding: 16px 0

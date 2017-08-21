@@ -8,7 +8,13 @@
 <body>
   <div class="cr-header" id="js-header">
     <div class="cr-header__motto">Design your life.</div>
-    <div class="cr-header__fixed-part">
+    <div class="cr-header__mobile hidden-md hidden-lg">
+      <a href="" class="cr-header__logo">
+        <img src="src/images/logo.png" alt="logo">
+      </a>
+      <div class="cr-burger-btn"></div>
+    </div>
+    <div class="cr-header__fixed-part mod-mobile-menu-closed">
       <div class="container">
         <div class="row">
           <ul class="cr-horizontal-list pull-left">
@@ -16,22 +22,26 @@
             <li class="cr-horizontal-list__item"><a href="" class="cr-header__link">Послуги</a></li>
             <li class="cr-horizontal-list__item"><a href="" class="cr-header__link">Простори</a></li>
           </ul>
-          <a href="" class="cr-header__logo"><img src="src/images/logo.png" alt="logo"></a>
+          <a href="" class="cr-header__logo">
+            <img src="src/images/logo.png" alt="logo" class="hidden-sm hidden-xs">
+            <img src="src/images/cr-logo-white.png" alt="logo" class="hidden-md hidden-lg">
+          </a>
           <ul class="cr-horizontal-list pull-right">
             <li class="cr-horizontal-list__item"><a href="" class="cr-header__link">FAQ</a></li>
             <li class="cr-horizontal-list__item"><a href="" class="cr-header__link">Про нас</a></li>
             <li class="cr-horizontal-list__item"><a href="" class="cr-header__link">Контакти</a></li>
           </ul>
+          <a class="cr-close-btn"></a>
         </div>
       </div>
     </div>
+    <a class="cr-burger-btn hidden-md hidden-lg"></a>
   </div>
   <div class="cr-hero">
     <video class="cr-hero-video" poster="src/images/hero-poster.png" id="bgvid" playsinline autoplay muted loop>
       <source src="src/videos/hero.mp4" type="video/mp4">
     </video>
-    <div class="cr-main-menu-wrapper">
-
+    <div class="cr-main-menu-wrapper hidden-xs hidden-sm">
       <div class="cr-panel" id="js-main-menu">
         <div class="cr-panel__item">
           <div class="cr-panel__item-title">Design</div>
@@ -390,7 +400,7 @@
       </div>
 
     </div>
-    <button class="cr-button--vertical mod-white">
+    <button class="cr-button--vertical mod-white hidden-xs">
       <span class="cr-button__label tc-mint">події</span></button>
   </div>
   <div class="cr-section">
@@ -409,7 +419,7 @@
             <th class="t-col--400"></th>
             <th class="t-a-left">Де:</th>
             <th class="t-a-left">Коли:</th>
-            <th class="t-a-left">Вартість:</th>
+            <th class="t-a-left hidden-sm">Вартість:</th>
           </tr>
         </thead>
         <tbody>
@@ -419,18 +429,27 @@
               <div>Сольмаз Фуляді</div>
             </td>
             <td>
-              <div class="t-bold">Design House</div>
+              <div class="t-bold"><span class="cr-cell-label">Де:</span>Design House</div>
               <div>вул. Погулянка, 5.</div>
             </td>
             <td>
-              <div class="t-bold">вересень</div>
+              <div class="t-bold"><span class="cr-cell-label">Коли:</span>вересень</div>
               <div>(дата узгоджується)</div>
             </td>
-            <td>
-              <div class="t-bold">1000 грн,</div>
+            <td class="hidden-sm">
+              <div class="t-bold"><span class="cr-cell-label">Вартість:</span>1000 грн,</div>
               <div>(при повній оплаті<br>до 20 липня - 800 грн.)</div>
             </td>
           </tr>
+          <tr class="hidden-xs hidden-md hidden-lg">
+            <td></td>
+            <td colspan="2">
+              <div class="t-bold"><span class="cr-cell-label">Вартість:</span>1000 грн,</div>
+              <div>(при повній оплаті до 20 липня - 800 грн.)</div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
           <tr>
             <td class="cr-table__row-caption">
               <div>Art п'ятниця</div>
@@ -443,10 +462,18 @@
             <td>
               <div class="t-bold">22 жовтня</div>
             </td>
-            <td>
+            <td class="hidden-sm">
               <div class="t-bold">безкоштовно</div>
             </td>
           </tr>
+          <tr class="hidden-xs hidden-md hidden-lg">
+            <td></td>
+            <td colspan="2">
+              <div class="t-bold"><span class="cr-cell-label">Вартість:</span>безкоштовно</div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
           <tr>
             <td class="cr-table__row-caption">
               <div>ДИЗАЙН-WEEKEND</div>
@@ -458,13 +485,21 @@
             <td>
               <div class="t-bold">1 грудня</div>
             </td>
-            <td>
+            <td class="hidden-sm">
               <div class="t-bold">від 800 грн</div>
             </td>
           </tr>
+          <tr class="hidden-xs hidden-md hidden-lg">
+            <td></td>
+            <td colspan="2">
+              <div class="t-bold"><span class="cr-cell-label">Вартість:</span>від 800 грн</div>
+            </td>
+          </tr>
+        </tbody>
+        <tbody>
           <tr>
             <td class="cr-table__row-caption">
-              Art п'ятниця
+              <div>Art п'ятниця</div>
               <div>Ольга ІВАНІВ</div>
             </td>
             <td>
@@ -474,8 +509,14 @@
             <td>
               <div class="t-bold">наступного року</div>
             </td>
-            <td>
+            <td class="hidden-sm">
               <div class="t-bold">безкоштовно</div>
+            </td>
+          </tr>
+          <tr class="hidden-xs hidden-md hidden-lg">
+            <td></td>
+            <td colspan="2">
+              <div class="t-bold"><span class="cr-cell-label">Вартість:</span>безкоштовно</div>
             </td>
           </tr>
         </tbody>
@@ -486,6 +527,59 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="cr-section">
+    <div class="container">
+      <div class="cr-quote"><span class="mod-accent">Sim</span>plicity is the ultimate sophistica&shy;tion.
+        <div class="cr-quote__author">
+          - Leonardo da Vinci
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="cr-section t-a-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <img src="src/images/dhlogo.png" alt="desing house" class="cr-dh-logo">
+          <p>
+            Спеціалізована школа дизайну CREATIVE є першою в Україні школою, яка створена за кращими світовими аналогами приватних шкіл дизайну для дорослих.
+          </p>
+          <a href="" class="cr-link">Дізнайся більше</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cr-section">
+    <div class="cr-map">
+      <div class="container">
+        <div class="cr-map__small-header">головний офіс  —
+        </div>
+        <div class="cr-map__big-header">lviv,<br>Pogulyanka, 5
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="cr-footer t-a-center">
+    <div class="container">
+      <ul class="cr-social-list pull-left">
+        <li class="cr-social-list__item"><a href="instagram.com">
+          <img src="src/images/icons/instagram-logo.png" height="18" width="19" alt="">
+        </a></li>
+      </ul>
+      <ul class="cr-horizontal-list">
+        <li class="cr-horizontal-list__item"><a href="" class="cr-link--white">Навчання</a></li>
+        <li class="cr-horizontal-list__item"><a href="" class="cr-link--white">Послуги</a></li>
+        <li class="cr-horizontal-list__item"><a href="" class="cr-link--white">Простори</a></li>
+        <li class="cr-horizontal-list__item"><a href="" class="cr-link--white">FAQ</a></li>
+        <li class="cr-horizontal-list__item"><a href="" class="cr-link--white">Про нас</a></li>
+        <li class="cr-horizontal-list__item"><a href="" class="cr-link--white">Контакти</a></li>
+      </ul>
+      <button class="cr-button mod-white pull-right tc-white">всі події</button>
+      <div class="cr-footer__copyright">De House 2017</div>
+    </div>
+  </div>
   <script src="./dist/index.bundle.js"></script>
 </body>
 </html>

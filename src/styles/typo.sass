@@ -2,10 +2,14 @@ h1
   font-family: $bold
   font-size: 65px
   color: $black
+  @include media(mobile)
+    font-size: 35px
 h2
   font-family: $regular
   font-size: 20px
   color: $light_gray
+  @include media(mobile)
+    font-size: 19px
 h3
   font-family: $bold
   font-size: 18px
@@ -30,6 +34,9 @@ h5
 
 .tc-mint
   color: $mint
+
+.tc-white
+  color: #fff
 
 .mod-with-mint-bg
   display: inline-block

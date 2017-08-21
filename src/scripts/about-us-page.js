@@ -1,7 +1,7 @@
 import $ from "jquery";
 
 
-const homePage = () => {
+const aboutUsPage = () => {
   var main_menu = $("#js-main-menu");
 
   main_menu.find('.cr-panel__item-title').click(function(event) {
@@ -42,5 +42,6 @@ const homePage = () => {
   open_mobile_menu.click(function(event) {
     header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
   });
+
 }
-export default homePage;
+export default aboutUsPage;
