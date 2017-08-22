@@ -2,6 +2,7 @@ import { dummyFoo } from './foo.js';
 import coursesList from './scripts/courses-list.js';
 import homePage from './scripts/home-page.js';
 import aboutUsPage from './scripts/about-us-page.js';
+import aboutCoursePage from './scripts/about-course-page.js';
 require('./styles/style.sass');
 
 console.log('i`m index js file');
@@ -13,6 +14,8 @@ if (window.location.pathname === '/courses-list.html') {
   homePage();
 } else if (window.location.pathname === '/about-us-page.html') {
   aboutUsPage();
+}else if (window.location.pathname === '/about-course-page.html') {
+  aboutCoursePage();
 }
 
 else {
