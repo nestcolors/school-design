@@ -1,0 +1,21 @@
+.cr-map
+  height: 280px
+  background-image: url(/src/images/map.jpg)
+  background-size: cover
+  background-repeat: no-repeat
+  text-align: center
+  padding-top: 50px
+  @include media(mobile)
+    background-position: 70%
+.cr-map__small-header
+  @extend h2
+  text-transform: uppercase
+  font-family: $bold
+.cr-map__big-header
+  @extend h1
+  color: #fff
+  text-transform: uppercase
+  line-height: 1.2
+  letter-spacing: 13px
+  @include media(mobile)
+    letter-spacing: 2px

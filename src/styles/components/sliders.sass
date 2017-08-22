@@ -1,0 +1,118 @@
+// PORTFOLIO SLIDER
+.cr-portfolio-slider
+  width: 54%
+  display: inline-block
+  @include media(tablet)
+    width: 100%
+    padding-left: 55px
+    overflow: hidden
+  @include media(mobile)
+    width: 100%
+    padding: 0
+  .slick-slide
+    img
+      margin-left: auto
+.cr-block-with-img
+  text-align: right
+  width: 54%
+  display: inline-block
+  @include media(tablet)
+    width: 100%
+    padding-left: 55px
+    overflow: hidden
+  @include media(mobile)
+    width: 100%
+    padding: 0
+.slick-dots
+  padding-right: 60px
+  bottom: 0
+  text-align: right
+  li
+    margin: 0 3px
+    &.slick-active
+      button
+        &:before
+          color: #b5b5b5
+    button
+      &:before
+        font-size: 13px
+        color: $white
+
+.slick-next, .slick-prev
+  bottom: -38px
+  right: 61px
+  top: auto
+  transform: none
+  &:before
+    content: ''
+    height: 1px
+    width: 22px
+    background-color: $dark
+    position: absolute
+    right: 0
+    top: 10px
+  &:after
+    content: ''
+    width: 9px
+    height: 9px
+    border-top: 1px solid $dark
+    border-right: 1px solid $dark
+    transform: rotate(45deg)
+    position: absolute
+    right: 0
+    top: 6px
+  &:hover
+    &:before
+      background-color: $light_gray
+    &:after
+      border-color: $light_gray
+.slick-prev
+  right: 100px
+  left: auto
+  &:before
+    position: absolute
+    left: 0
+    right: auto
+  &:after
+    border-top: 1px solid $dark
+    border-right: 1px solid $dark
+    transform: rotate(-135deg)
+    right: auto
+    left: 0
+.cr-slider__text-block
+  display: inline-block
+  width: 45%
+  vertical-align: top
+  padding-left: 25px
+
+
+// PEOPLE SLIDER
+
+.cr-people-slider
+  width: 100%
+  display: inline-block
+  .slick-list
+    padding-left: 0 !important
+.cr-arrow-wrapper
+  width: 120px
+  position: relative
+.cr-people-slider__header
+  width: 260px
+  margin-top: 295px
+  display: inline-block
+  display: inline-block
+  @extend h3
+  text-transform: uppercase
+.cr-people__descr
+  font-size: 15px
+  color: $dark
+  letter-spacing: 1.5px
+
+.cr-people__name
+  font-family: $bold
+  letter-spacing: 1.7px
+  font-size: 17px
+
+.cr-partners__logo
+  display: block
+  margin: 0 auto 163px auto

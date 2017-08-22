@@ -1,4 +1,5 @@
 import $ from "jquery";
+import slick from "./slick.min.js"
 
 
 const aboutUsPage = () => {
@@ -41,6 +42,19 @@ const aboutUsPage = () => {
   var open_mobile_menu = header.find(".cr-burger-btn");
   open_mobile_menu.click(function(event) {
     header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
+  });
+  $(document).ready(function(){
+    $('.cr-portfolio-slider').slick({
+      arrows: true,
+      dots: true
+    });
+    $('.cr-people-slider').slick({
+      centerMode: true,
+      centerPadding: '100px',
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      appendArrows: $('.arrows-slider-1')
+    });
   });
 
 }

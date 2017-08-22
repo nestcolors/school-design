@@ -1,5 +1,8 @@
 .cr-section
   margin-top: 70px
+  &.mod-no-margin-tablets
+    @include media(to_tablet)
+      margin-top: 0
   &.mod-black
     background-color: $black
     .cr-section__header
@@ -15,3 +18,8 @@
   text-transform: uppercase
   letter-spacing: 2px
   font-family: $bold
+.cr-section__header-desrc
+  font-family: $regular
+  font-size: 16px
+  line-height: 21px
+  margin-top: 40px
