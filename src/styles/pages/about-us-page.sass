@@ -8,6 +8,8 @@
   @extend h1
   text-transform: uppercase
   letter-spacing: 12.4px
+  @include media(to_tablet)
+    color: #fbf7f6
 
 .cr-black-board
   width: 527px
@@ -32,3 +34,9 @@
   .cr-button
     color: #fff
     float: right
+    @include media(to_tablet)
+      position: relative
+      left: 73px
+  @include media(to_tablet)
+    width: 100%
+    padding: 0 0 0 69px
