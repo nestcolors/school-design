@@ -16,6 +16,10 @@
   text-align: right
   width: 54%
   display: inline-block
+  vertical-align: 
+  overflow: hidden
+  &.mod-left-side
+    text-align: left
   @include media(tablet)
     width: 100%
     padding-left: 55px
@@ -84,7 +88,11 @@
   width: 45%
   vertical-align: top
   padding-left: 25px
-
+  &.mod-left-side
+    .cr-black-board
+      margin-left: auto
+      left: auto
+      right: -70px
 
 // PEOPLE SLIDER
 
