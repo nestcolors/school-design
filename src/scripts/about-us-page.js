@@ -49,7 +49,6 @@ const aboutUsPage = () => {
       dots: true,
     });
     $('.cr-people-slider').slick({
-      centerMode: false,
       slidesToShow: 3,
       slidesToScroll: 1,
       arrows: true,
@@ -58,14 +57,23 @@ const aboutUsPage = () => {
         {
           breakpoint: 992,
           settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false,
-          dots: true
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
           }
         }
       ]
+
     });
   });
 
