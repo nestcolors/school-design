@@ -6,8 +6,10 @@
   &.mod-black
     background-color: $black
     .cr-section__header
-      padding-top: 80px
+      padding: 80px 0 90px
       color: #fff
+      @include media(to_tablet)
+        padding: 80px 0 70px
   &.mod-margin-to-hero
     margin-top: -230px
 .cr-section__header
@@ -15,7 +17,9 @@
   @extend h1
   text-transform: uppercase
   letter-spacing: 13px
-  margin-bottom: 30px
+  margin-bottom: 90px
+  @include media(to_tablet)
+    margin-bottom: 0;
 .cr-section__header-top
   @extend h2
   text-transform: uppercase
@@ -25,4 +29,6 @@
   font-family: $regular
   font-size: 16px
   line-height: 21px
-  margin-top: 40px
+  margin-top: 60px
+  @include media(to_tablet)
+    margin: 28px 0 58px

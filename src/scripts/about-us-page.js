@@ -46,14 +46,26 @@ const aboutUsPage = () => {
   $(document).ready(function(){
     $('.cr-portfolio-slider').slick({
       arrows: true,
-      dots: true
+      dots: true,
     });
     $('.cr-people-slider').slick({
-      centerMode: true,
-      centerPadding: '100px',
+      centerMode: false,
       slidesToShow: 3,
-      slidesToScroll: 3,
-      appendArrows: $('.arrows-slider-1')
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false,
+          dots: true
+          }
+        }
+      ]
     });
   });
 

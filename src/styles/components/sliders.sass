@@ -15,7 +15,7 @@
       @include media(to_tablet)
         width: 100%
   @include media(to_tablet)
-      margin-bottom: 0 !important;
+      margin-bottom: 0 !important
 .cr-block-with-img
   text-align: right
   width: 54%
@@ -28,6 +28,8 @@
     width: 100%
     padding-left: 55px
     overflow: hidden
+    img
+      width: 100%
   @include media(mobile)
     width: 100%
     padding: 0
@@ -100,8 +102,6 @@
       margin-left: auto
       left: auto
       right: -70px
-    @include media(to_tablet)
-      padding: 0px 0px 0px 69px
   @include media(to_tablet)
     width: 93%
     background: $dark
@@ -115,23 +115,36 @@
 .cr-people-slider
   width: 100%
   display: inline-block
+  margin-top: 15px
+  margin-bottom: 115px
+  .slick-arrow
+    left: -240px
+    bottom: 50px
+    &:nth-child(2)
+      left: -240px !important
+      bottom: 0px !important
+  .slick-next
+    left: -200px
+  img
+    margin-bottom: 15px
+  .slick-dots
+    bottom: 0
+    text-align: center
   .slick-list
     padding-left: 0 !important
 .cr-arrow-wrapper
   width: 120px
   position: relative
-.cr-people-slider__header
-  width: 260px
-  margin-top: 295px
-  display: inline-block
-  display: inline-block
+  //position: relativecr-section__header-desrc
   @extend h3
   text-transform: uppercase
+  @include media(to_tablet)
+    margin: 0 0 30px
 .cr-people__descr
   font-size: 15px
   color: $dark
   letter-spacing: 1.5px
-
+    
 .cr-people__name
   font-family: $bold
   letter-spacing: 1.7px
@@ -140,3 +153,16 @@
 .cr-partners__logo
   display: block
   margin: 0 auto 163px auto
+
+
+.cr-people-slider__header
+  font-family: $semibold
+  font-size: 20px
+  letter-spacing: 2px
+  text-align: left
+  color: #414042
+  position: relative;
+  bottom: -285px;
+  text-transform: uppercase
+  @include media(to_tablet)
+    bottom: 0
