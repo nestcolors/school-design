@@ -20,15 +20,21 @@
   margin-bottom: 90px
   @include media(to_tablet)
     margin-bottom: 37px;
+  @include media(mobile)
+    margin: 10px 0
+    line-height: 45px
 .cr-section__header-top
   @extend h2
   text-transform: uppercase
   letter-spacing: 2px
   font-family: $bold
+  @include media(mobile)
+    line-height: 0
+    margin-bottom: 10px;
 .cr-section__header-desrc
   font-family: $regular
   font-size: 16px
   line-height: 21px
   margin: 60px
-  @include media(to_tablet)
-    margin: 28px 0 8px
+  @include media(mobile)
+    margin: 0

@@ -47,6 +47,16 @@ const aboutUsPage = () => {
     $('.cr-portfolio-slider').slick({
       arrows: true,
       dots: true,
+      centerMode: true,
+      centerPadding: '0px',
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            arrows: false
+          }
+        }
+      ]
     });
     $('.cr-people-slider').slick({
       slidesToShow: 3,
@@ -58,6 +68,15 @@ const aboutUsPage = () => {
           breakpoint: 992,
           settings: {
             slidesToShow: 3,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
             dots: true

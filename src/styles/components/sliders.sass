@@ -14,6 +14,8 @@
       margin-left: auto
       @include media(to_tablet)
         width: 100%
+      @include media(mobile)
+        height: 340px
   @include media(to_tablet)
       margin-bottom: 0 !important
   .slick-dots
@@ -33,6 +35,11 @@
     @include media(tablet)
       position: relative
       bottom: 116px
+    @include media(mobile)
+      bottom: 75px;
+      text-align: right;
+      right: 0px;
+      padding-right: 0
 .cr-block-with-img
   text-align: right
   width: 54%
@@ -42,6 +49,7 @@
   &.mod-left-side
     text-align: left
   @include media(tablet)
+    position: relative
     width: 100%
     padding-left: 55px
     overflow: hidden
@@ -50,8 +58,9 @@
   @include media(mobile)
     width: 100%
     padding: 0
-  @include media(tablet)
-    position: relative
+    img
+      width: 100%
+      height: 261px
 
 .slick-next, .slick-prev
   bottom: -38px
@@ -112,6 +121,8 @@
     padding: 36px 35px 32px 67px
   @include media(mobile)
     width: 100%
+    padding: 50px 17px 37px
+    top: -80px
 .сooperation
   @include media(to_tablet)
     top: -50px
@@ -126,7 +137,7 @@
   margin-bottom: 115px
   .slick-arrow
     left: -240px
-    bottom: 50px
+    bottom: 25px
     &:nth-child(2)
       left: -240px !important
       bottom: 0px !important
@@ -180,7 +191,7 @@
   text-align: left
   color: #414042
   position: relative;
-  bottom: -285px;
+  bottom: -300px;
   text-transform: uppercase
   @include media(to_tablet)
     bottom: 0
