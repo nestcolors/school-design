@@ -63,6 +63,7 @@ const aboutUsPage = () => {
       slidesToScroll: 1,
       arrows: true,
       dots: false,
+      centerMode: true,
       responsive: [
         {
           breakpoint: 992,
