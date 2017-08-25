@@ -5,7 +5,10 @@
   background-repeat: no-repeat
   text-align: center
   padding-top: 50px
+  @include media(to_tablet)
+    height: 323px
   @include media(mobile)
+    height: 240px
     background-position: 70%
 .cr-map__small-header
   @extend h2
@@ -18,4 +21,4 @@
   line-height: 1.2
   letter-spacing: 13px
   @include media(mobile)
-    letter-spacing: 2px
+    letter-spacing: 6px

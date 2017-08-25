@@ -36,9 +36,9 @@
       position: relative
       bottom: 116px
     @include media(mobile)
-      bottom: 75px;
-      text-align: right;
-      right: 0px;
+      bottom: 75px
+      text-align: right
+      right: 0px
       padding-right: 0
 .cr-block-with-img
   text-align: right
@@ -113,19 +113,18 @@
       margin-left: auto
       left: auto
       right: -70px
+      margin-top: 42px
   @include media(to_tablet)
     width: 93%
     background: $dark
     position: relative
-    top: -120px
+    margin-top: -120px
     padding: 36px 35px 32px 67px
   @include media(mobile)
     width: 100%
     padding: 50px 17px 37px
-    top: -80px
-.сooperation
-  @include media(to_tablet)
-    top: -50px
+    margin-top: -65px
+
 
 
 // PEOPLE SLIDER
@@ -135,6 +134,8 @@
   display: inline-block
   margin-top: 15px
   margin-bottom: 115px
+  @include media(to_tablet)
+    margin-left: 17px
   .slick-arrow
     left: -240px
     bottom: 25px
@@ -182,6 +183,8 @@
 .cr-partners__logo
   display: block
   margin: 0 auto 163px auto
+  @include media(mobile)
+    margin: 0 auto 90px auto
 
 
 .cr-people-slider__header
@@ -190,8 +193,8 @@
   letter-spacing: 2px
   text-align: left
   color: #414042
-  position: relative;
-  bottom: -300px;
+  position: relative
+  bottom: -300px
   text-transform: uppercase
   @include media(to_tablet)
     bottom: 0
