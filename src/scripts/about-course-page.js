@@ -45,16 +45,129 @@ const aboutCoursePage = () => {
     header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
   });
   $(document).ready(function(){
-    $('.cr-portfolio-slider').slick({
+    $('.cr-our-works').slick({
       arrows: true,
-      dots: true
+      dots: false,
+      centerMode: true,
+      centerPadding: '0px',
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            arrows: false
+          }
+        }
+      ]
     });
     $('.cr-people-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
       centerMode: true,
-      centerPadding: '100px',
-      slidesToShow: 3,
-      slidesToScroll: 3,
-      appendArrows: $('.arrows-slider-1')
+      centerPadding: '200px',
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            centerMode: true,
+            centerPadding: '150px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            centerMode: true,
+            centerPadding: '150px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+         {
+          breakpoint: 692,
+          settings: {
+            centerMode: true,
+            centerPadding: '200px',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            centerMode: true,
+            centerPadding: '10px',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+
+    });
+    $('.cr-courses-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '50px',
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            centerMode: true,
+            centerPadding: '150px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            centerMode: true,
+            centerPadding: '150px',
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+         {
+          breakpoint: 692,
+          settings: {
+            centerMode: true,
+            centerPadding: '200px',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            centerMode: true,
+            centerPadding: '10px',
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+
     });
   });
 

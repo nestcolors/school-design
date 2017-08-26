@@ -11,13 +11,12 @@
     padding: 0
   .slick-slide
     img
-      margin-left: auto
       @include media(to_tablet)
         width: 100%
   @include media(to_tablet)
       margin-bottom: 0 !important
   .slick-dots
-    padding-right: 60px
+    padding-right: 65px
     bottom: 0
     text-align: right
     li
@@ -61,7 +60,7 @@
 
 .slick-next, .slick-prev
   bottom: -38px
-  right: 61px
+  right: 75px
   top: auto
   transform: none
   &:before
@@ -88,7 +87,7 @@
     &:after
       border-color: $light_gray
 .slick-prev
-  right: 100px
+  right: 110px
   left: auto
   &:before
     position: absolute
@@ -104,13 +103,13 @@
   display: inline-block
   width: 45%
   vertical-align: top
-  padding-left: 25px
   &.mod-left-side
     .cr-black-board
       margin-left: auto
       left: auto
       right: -70px
       margin-top: 42px
+      width: 591px
   @include media(to_tablet)
     width: 93%
     background: $dark
@@ -196,3 +195,69 @@
   @include media(to_tablet)
     bottom: 0
     margin-top: 50px
+
+//OUR WORK SLIDER
+.cr-our-works
+  width: 54%
+  display: inline-block
+  @include media(tablet)
+    width: 100%
+    padding-left: 55px
+    overflow: hidden
+  @include media(mobile)
+    width: 100%
+    padding: 0cr-black-board
+  .slick-slide
+    img
+      @include media(to_tablet)
+        width: 100%
+  @include media(to_tablet)
+      margin-bottom: 0 !important
+  .slick-arrow
+    right: 0
+  .slick-prev
+    bottom: 65px
+    right: -26px
+  .slick-next
+    bottom: 65px
+    right: -70px
+
+.cr-block-with-img
+  text-align: right
+  width: 54%
+  display: inline-block
+  vertical-align: 
+  overflow: hidden
+  &.mod-left-side
+    text-align: left
+  @include media(tablet)
+    position: relative
+    width: 100%
+    padding-left: 55px
+    overflow: hidden
+    img
+      width: 100%
+  @include media(mobile)
+    width: 100%
+    padding: 0
+    img
+      width: 100%
+
+
+      //Courses slider
+.cr-courses-slider
+  width: 100%
+  display: inline-block
+  margin-top: 15px
+  margin-bottom: 115px
+  @include media(mobile)
+    padding-left: 12px
+  .slick-arrow
+    right: 45px
+    &:nth-child(2)
+      left: -240px !important
+      bottom: 0px !important
+  .slick-next
+    right: 0
+  img
+    margin-bottom: 15px

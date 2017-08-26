@@ -17,12 +17,37 @@
     text-align: left
 
 .cr-black-board
-  width: 491px
+  width: 527px
   padding: 40px 50px 70px 70px
   background-color: $dark
   color: #fff
   position: relative
-  left: -70px
+  margin-left: -70px
+  @include media(mobile)
+    margin-left: 0
+  .cr-button-email
+    float: left
+    position: relative
+    left: -397px
+    @include media(to_tablet)
+      left: 0
+      border: 2px solid $white
+    @include media(mobile)
+      display: block
+      float: none
+      border: none
+      padding: 0
+      margin-bottom: 52px
+  .cr-button-write
+    float: left
+    bottom: 40px
+    left: -70px
+    @include media(to_tablet)
+      float: right
+      bottom: 0
+      left: 0
+    @include media(mobile)
+      float: none
   h3
     margin-top: 0
     font-size: 20px
@@ -61,26 +86,3 @@
   @include media(to_tablet)
     bottom: 0
     margin-top: 50px
-.cr-button-email
-  float: left
-  position: relative
-  left: -397px
-  @include media(to_tablet)
-    left: 0
-    border: 2px solid $white
-  @include media(mobile)
-    display: block
-    float: none
-    border: none
-    padding: 0
-    margin-bottom: 52px
-.cr-button-write
-  float: left
-  bottom: 40px
-  left: -70px
-  @include media(to_tablet)
-    float: right
-    bottom: 0
-    left: 0
-  @include media(mobile)
-    float: none

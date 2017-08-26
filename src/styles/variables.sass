@@ -38,3 +38,13 @@ $bold: "Proxima Bold"
   @else if $media == wide
     @media only screen and (min-width: 992px)
       @content
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+    @content
+  &:-moz-placeholder
+    @content
+  &::-moz-placeholder
+    @content
+  &:-ms-input-placeholder
+    @content
