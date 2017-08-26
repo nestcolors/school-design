@@ -115,10 +115,8 @@ const aboutCoursePage = () => {
 
     });
     $('.cr-courses-slider').slick({
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      centerMode: true,
-      centerPadding: '50px',
       arrows: true,
       dots: false,
       responsive: [
