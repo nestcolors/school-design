@@ -14,8 +14,6 @@
       margin-left: auto
       @include media(to_tablet)
         width: 100%
-      @include media(mobile)
-        height: 340px
   @include media(to_tablet)
       margin-bottom: 0 !important
   .slick-dots
@@ -36,7 +34,7 @@
       position: relative
       bottom: 116px
     @include media(mobile)
-      bottom: 25px
+      bottom: 75px
       text-align: right
       right: 0px
       padding-right: 0
@@ -44,7 +42,7 @@
   text-align: right
   width: 54%
   display: inline-block
-  vertical-align:
+  vertical-align: 
   overflow: hidden
   &.mod-left-side
     text-align: left
@@ -60,7 +58,6 @@
     padding: 0
     img
       width: 100%
-      height: 261px
 
 .slick-next, .slick-prev
   bottom: -38px
@@ -123,7 +120,7 @@
   @include media(mobile)
     width: 100%
     padding: 50px 17px 37px
-    margin-top: -15px
+    margin-top: -65px
 
 
 
@@ -134,8 +131,8 @@
   display: inline-block
   margin-top: 15px
   margin-bottom: 115px
-  @include media(to_tablet)
-    margin-left: 17px
+  @include media(mobile)
+    padding-left: 12px
   .slick-arrow
     left: -240px
     bottom: 25px
@@ -174,7 +171,7 @@
   font-size: 15px
   color: $dark
   letter-spacing: 1.5px
-
+    
 .cr-people__name
   font-family: $bold
   letter-spacing: 1.7px

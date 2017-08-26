@@ -59,16 +59,19 @@ const aboutUsPage = () => {
       ]
     });
     $('.cr-people-slider').slick({
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '150px',
       arrows: true,
       dots: false,
-      centerMode: true,
       responsive: [
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 3,
+            centerMode: true,
+            centerPadding: '150px',
+            slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
             dots: true
@@ -77,7 +80,20 @@ const aboutUsPage = () => {
         {
           breakpoint: 768,
           settings: {
+            centerMode: true,
+            centerPadding: '150px',
             slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+         {
+          breakpoint: 692,
+          settings: {
+            centerMode: true,
+            centerPadding: '200px',
+            slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             dots: true
@@ -86,6 +102,8 @@ const aboutUsPage = () => {
         {
           breakpoint: 480,
           settings: {
+            centerMode: true,
+            centerPadding: '10px',
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
