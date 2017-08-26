@@ -2,8 +2,8 @@
 	width: 262px !important
 	height: 324px
 	padding: 13px 11px 18px 11px
-	margin: 0 25px
-	.cr-courses__black_border
+	margin: 0 26px
+	.cr-courses__top
 		font-family: $semibold
 		font-size: 16px
 		letter-spacing: 1.6px
@@ -14,17 +14,6 @@
 		margin: 0
 		display: block
 		color: $dark
-	.cr-courses__white_border
-		font-family: $semibold
-		font-size: 16px
-		letter-spacing: 1.6px
-		float: right
-		padding: 8px 17px 8px 15px
-		border: 2px solid $white
-		margin-right: 3px
-		margin: 0
-		display: block
-		color: $white
 	.course-start
 		font-size: 16px
 		font-family: $regular
@@ -51,25 +40,24 @@
 		color: $black
 		text-transform: uppercase
 		letter-spacing: 1.8px
-		.modern-yellow
+		.mode-yellow
 			color: #fff450
-		.modern-violet
+		.mode-violet
 			color: #be639c
-		.modern-white
+	&:hover		
+		background: #be639c
+		border: 1px solid #b070b2
+		.cr-courses__top
+			border: 2px solid $white
 			color: $white
-.mode-violet
-	background: #be639c
-	border: 1px solid #b070b2
-	.cr-courses__title
-		margin: 70px 0 15px
-		font-family: $bold
-		font-size: 18px
-		color: $black
-		text-transform: uppercase
-		letter-spacing: 1.8px
-		.modern-yellow
-			color: #fff450
-		.modern-violet
-			color: #be639c
-		.modern-white
-			color: $white
+		.cr-courses__title
+			margin: 70px 0 15px
+			font-family: $bold
+			font-size: 18px
+			color: $black
+			text-transform: uppercase
+			letter-spacing: 1.8px
+			.mode-yellow
+				color: $white
+			.mode-violet
+				color: $white

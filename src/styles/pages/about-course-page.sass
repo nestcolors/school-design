@@ -2,6 +2,8 @@
   background-color: $white
   width: 100%
   padding: 43px 67px
+  @include media(to_tablet)
+    padding: 30px 60px
   .cr-type-select
     margin-top: 18px
     float: right
@@ -36,3 +38,8 @@
   margin: 30px 0 50px
 .cr-courses__item .slick-cloned
   margin: 0 50px
+.no-margin-tablet
+  @include media(to_tablet)
+    margin: 0 !important
+    padding: 0
+    width: 100%

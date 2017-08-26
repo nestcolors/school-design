@@ -14,6 +14,8 @@
         margin-bottom: 0
   &.mod-margin-to-hero
     margin-top: -230px
+    @include media(to_tablet)
+      margin-top: -150px
 .cr-section__header
   line-height: 65.8px
   @extend h1
@@ -30,6 +32,8 @@
   text-transform: uppercase
   letter-spacing: 2px
   font-family: $bold
+  @include media(to_tablet)
+    width: 250px
   @include media(mobile)
     line-height: 0
     margin-bottom: 10px;
@@ -42,3 +46,7 @@
     margin: 0
   @include media(mobile)
     margin: 0
+.inline-block-tablet
+  @include media(to_tablet)
+    display: inline-block
+    margin-top: 0 !important
