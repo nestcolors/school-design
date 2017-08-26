@@ -119,7 +119,7 @@
   @include media(mobile)
     width: 100%
     padding: 50px 17px 37px
-    margin-top: -65px
+    margin-top: -85px
 
 
 
@@ -208,9 +208,16 @@
     width: 100%
     padding: 0cr-black-board
   .slick-slide
+    @include media(mobile)
+      margin-bottom: 85px
     img
       @include media(to_tablet)
         width: 100%
+  .slick-slide>div
+    font-size: 14px
+    color: $black
+    font-family: $light
+    padding: 14px 13px 
   @include media(to_tablet)
       margin-bottom: 0 !important
   .slick-arrow

@@ -9,6 +9,8 @@
     float: right
   .cr-flex-table
     margin-top: 0
+  @include media(mobile)
+    padding: 23px 15px 80px 15px
 .cr-course-block__footer
   margin-top: 35px
 
@@ -21,6 +23,8 @@
     font-weight: 300
     line-height: 1.28
     color: $dark
+    @include media(mobile)
+      font-size: 16px
   .t-a-center
     margin-bottom: 26px
   .cr-button-email
@@ -40,6 +44,10 @@
   margin: 0 50px
 .no-margin-tablet
   @include media(to_tablet)
-    margin: 0 !important
+    margin: 0
     padding: 0
     width: 100%
+.cr-simple-list
+  @include media(mobile)
+    margin-left: -20px
+    font-size: 16px;

@@ -169,5 +169,12 @@ const aboutCoursePage = () => {
     });
   });
 
+  $('.cr-courses__item').on('mouseover', function(){
+    $('.cr-courses__item button').removeClass('hidden');
+  });
+  $('.cr-courses__item').on('mouseleave', function(){
+    $('.cr-courses__item button').addClass('hidden');
+  });
+
 }
 export default aboutCoursePage;

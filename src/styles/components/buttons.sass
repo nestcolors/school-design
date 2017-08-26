@@ -27,8 +27,10 @@
     transform: rotate(45deg)
   &.mod-white
     border-color: #fff
+    color: #fff
     &:after, &:before
       border-color: #fff
+      color: #fff
 .cr-button-email
   border: 2px solid $dark
   padding: 10px 20px 10px 20px
@@ -138,6 +140,10 @@
   font-size: 16px
   cursor: pointer
   margin-left: 25px
+  @include media(mobile)
+    margin-left: 0
+    margin-top: 25px
+
 
 .cr-button-sign-in
   border: 2px solid $white
@@ -171,3 +177,14 @@
     border-color: #fff
     &:after, &:before
       border-color: #fff
+.no-border-xs
+  @include media(mobile)
+    border: none
+    color: $mint
+    width: 100%
+    &:after
+      content: ''
+      display: none
+    &:before
+      content: ''
+      display: none
