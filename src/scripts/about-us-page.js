@@ -49,6 +49,7 @@ const aboutUsPage = () => {
       dots: true,
       centerMode: true,
       centerPadding: '0px',
+      fade: true,
       responsive: [
         {
           breakpoint: 992,

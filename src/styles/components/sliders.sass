@@ -15,9 +15,13 @@
         width: 100%
   @include media(to_tablet)
       margin-bottom: 0 !important
+  .slick-next, .slick-prev
+    bottom: -20px
+    z-index: 999
   .slick-dots
     padding-right: 65px
-    bottom: 0
+    bottom: 45px
+    right: 20px
     text-align: right
     li
       margin: 0 3px
