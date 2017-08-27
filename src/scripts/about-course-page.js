@@ -60,15 +60,6 @@ const aboutCoursePage = () => {
             dots: true
           }
         }
-      ],
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            dots: true
-          }
-        }
       ]
     });
     $('.cr-people-slider').slick({
@@ -131,6 +122,30 @@ const aboutCoursePage = () => {
       slidesToScroll: 1,
       arrows: true,
       dots: false,
+       responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            centerMode: true,
+            centerPadding: '10px',
+            arrows: true,
+            dots: true
+          }
+        }
+      ],
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
     });
   });
 
