@@ -122,20 +122,16 @@ const aboutCoursePage = () => {
       slidesToScroll: 1,
       arrows: true,
       dots: false,
-       responsive: [
+      responsive: [
         {
           breakpoint: 992,
           settings: {
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
-            centerMode: true,
-            centerPadding: '10px',
-            arrows: true,
+            arrows: false,
             dots: true
           }
-        }
-      ],
-      responsive: [
+        },
         {
           breakpoint: 768,
           settings: {
