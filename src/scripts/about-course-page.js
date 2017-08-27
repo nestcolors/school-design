@@ -3,7 +3,7 @@ import slick from "./slick.min.js"
 
 
 const aboutCoursePage = () => {
-  console.log("aboutCoursePa ge"); 
+  console.log("aboutCoursePa ge");
   var main_menu = $("#js-main-menu");
 
   main_menu.find('.cr-panel__item-title').click(function(event) {
@@ -45,6 +45,7 @@ const aboutCoursePage = () => {
     header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
   });
   $(document).ready(function(){
+
     $('.cr-our-works').slick({
       arrows: true,
       dots: false,
@@ -169,12 +170,21 @@ const aboutCoursePage = () => {
     });
   });
 
-  $('.cr-courses__item').on('mouseover', function(){
-    $('.cr-courses__item button').removeClass('hidden');
-  });
-  $('.cr-courses__item').on('mouseleave', function(){
-    $('.cr-courses__item button').addClass('hidden');
-  });
+  window.onscroll = function() {showBar()};
+
+  var scrollPosition = document.body.scrollTop + window.innerHeight;
+  var pageHeight = document.body.clientHeight;
+  var some = (document.body.scrollTop + window.innerHeight) - document.body.clientHeight;
+  var currentHeight = function() {
+    return ((document.body.scrollTop + window.innerHeight) - document.body.clientHeight)
+  }
+  function showBar() {
+      if (document.body.scrollTop > 700 && currentHeight() < -300) {
+          $('.fixed-to-screen').fadeIn(100);
+      } else {
+          $('.fixed-to-screen').fadeOut(100);
+      }
+  }
 
 }
 export default aboutCoursePage;

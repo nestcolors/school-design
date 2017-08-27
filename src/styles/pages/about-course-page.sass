@@ -1,3 +1,8 @@
+@keyframes bg-size
+    from {transform: scale(1)}
+    to {transform: scale(1.05, 1.05)}
+.slick-list
+  padding-bottom: 20px
 .cr-course-block
   background-color: $white
   width: 100%
@@ -11,9 +16,36 @@
     margin-top: 0
   @include media(mobile)
     padding: 23px 15px 80px 15px
+.cr-hero-container
+  height: 620px
+  position: relative
+  .cr-hero
+    height: 620px
+    width: 200%
+    background-image: url('~/../src/images/course-hero.jpg')
+    background-repeat: repeat-x
+    background-size: cover
+    background-attachment: fixed
+    background-center: left
+    animation-name: bg-size
+    animation-duration: 30s
+    animation-timing-function: linear
+    animation-iteration-count: infinite
+    animation-direction: alternate
 .cr-course-block__footer
   margin-top: 35px
-
+  &.fixed-to-screen
+    display: none
+    position: fixed
+    width: 100%
+    background-color: white
+    bottom: 0
+    z-index: 999
+    left: 0
+    margin: 0
+    padding: 10px 50px
+    .back-to
+      margin-top: 10px
 .cr-two-columns
   font-size: 18px
   line-height: 1.28

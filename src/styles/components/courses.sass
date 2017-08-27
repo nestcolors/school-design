@@ -1,8 +1,10 @@
 .cr-courses__item
+	transition-duration: 0.2s
 	width: 262px !important
 	height: 324px
 	padding: 13px 11px 18px 11px
 	margin: 0 26px
+	transition-duration: 0.2s
 	.cr-courses__chose-level
 		font-family: $semibold
 		font-size: 16px
@@ -24,6 +26,7 @@
 		letter-spacing: 1.6px
 		color: $dark
 		margin-bottom: 30px
+		transition-duration: 0.2s
 	.course-price
 		font-size: 16px
 		font-family: $regular
@@ -31,9 +34,12 @@
 		color: $dark
 		margin-bottom: 0
 	.discount
-		margin: 0 0 5px
+		margin: 0 0 50px
 		font-family: $light
 		font-size: 15px
+		transition-duration: 0.5s
+	.cr-button
+		opacity: 0
 	.mod-white
 		width: 100%
 .mode-gray
@@ -41,6 +47,7 @@
 	border: 1px solid #fff450
 	.cr-courses__title
 		margin: 70px 0 50px
+		transition-duration: 0.2s
 		font-family: $bold
 		font-size: 18px
 		color: $black
@@ -50,9 +57,10 @@
 			color: #fff450
 		.mode-violet
 			color: #be639c
-	&:hover		
+	&:hover
 		background: #be639c
 		border: 1px solid #b070b2
+		box-shadow: 10px 10px 0px #fff450
 		.cr-courses__top
 			border: 2px solid $white
 			color: $white
@@ -67,3 +75,9 @@
 				color: $white
 			.mode-violet
 				color: $white
+		.course-start
+			margin-bottom: 0px
+		.discount
+			margin-bottom: 10px
+		.cr-button
+			opacity: 1
