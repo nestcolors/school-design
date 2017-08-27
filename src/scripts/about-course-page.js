@@ -50,6 +50,7 @@ const aboutCoursePage = () => {
       arrows: true,
       dots: false,
       centerMode: true,
+      fade: true,
       centerPadding: '0px',
       responsive: [
         {
