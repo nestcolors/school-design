@@ -3,6 +3,8 @@
     to {transform: scale(1.05, 1.05)}
 .slick-list
   padding-bottom: 20px
+  @include media(mobile)
+    padding-bottom: 0px
 .cr-course-block
   background-color: $white
   width: 100%
@@ -32,6 +34,11 @@
     animation-timing-function: linear
     animation-iteration-count: infinite
     animation-direction: alternate
+.cr-black-board.course-result
+  padding: 70px 50px 90px 70px
+  @include media(to_tablet)
+    padding: 0
+    margin: 0
 .cr-course-block__footer
   margin-top: 35px
   &.fixed-to-screen

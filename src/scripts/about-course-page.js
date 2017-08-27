@@ -50,12 +50,23 @@ const aboutCoursePage = () => {
       arrows: true,
       dots: false,
       centerMode: true,
+      fade: true,
       centerPadding: '0px',
       responsive: [
         {
           breakpoint: 992,
           settings: {
-            arrows: false
+            arrows: false,
+            dots: true
+          }
+        }
+      ],
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false,
+            dots: true
           }
         }
       ]
