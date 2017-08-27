@@ -21,6 +21,10 @@
 .cr-hero-container
   height: 620px
   position: relative
+  @include media(to_tablet)
+    height: 575px
+  @include media(mobile)
+    height: 310px
   .cr-hero
     height: 620px
     width: 100%
@@ -34,11 +38,10 @@
     animation-timing-function: linear
     animation-iteration-count: infinite
     animation-direction: alternate
-.cr-black-board.course-result
-  padding: 70px 50px 90px 70px
-  @include media(to_tablet)
-    padding: 0
-    margin: 0
+    @include media(to_tablet)
+      height: 575px
+    @include media(mobile)
+      height: 310px
 .cr-course-block__footer
   margin-top: 35px
   &.fixed-to-screen
@@ -97,3 +100,27 @@
   @include media(mobile)
     display: flex
     flex-wrap: wrap
+.cr-button-registration
+  float: left
+  bottom: 40px
+  left: -70px
+  @include media(to_tablet)
+    float: right
+    bottom: 40px
+    left: 239px
+  @include media(mobile)
+    float: none
+    bottom: 0
+    left: 0
+.mod-left
+  left: -475px
+  &:after
+    display: none
+  &:before
+    display: none
+  @include media(mobile)
+    width: 218px;
+    margin: 0 auto;
+    margin-bottom: 38px;
+    display: block
+    padding: 10px
