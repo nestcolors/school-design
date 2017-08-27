@@ -21,7 +21,7 @@
   position: relative
   .cr-hero
     height: 620px
-    width: 200%
+    width: 100%
     background-image: url('~/../src/images/course-hero.jpg')
     background-repeat: repeat-x
     background-size: cover
@@ -83,3 +83,10 @@
   @include media(mobile)
     margin-left: -20px
     font-size: 16px;
+.display-flex-on-small
+  @include media(to_tablet) 
+    display: flex
+    flex-wrap: wrap
+  @include media(mobile)
+    display: flex
+    flex-wrap: wrap

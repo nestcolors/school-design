@@ -110,16 +110,27 @@
       right: -70px
       margin-top: 42px
       width: 591px
+      @include media(to_tablet)
+        margin-top: 0
+        right: 0
+        padding: 0
   @include media(to_tablet)
     width: 93%
     background: $dark
     position: relative
     margin-top: -90px
     padding: 36px 35px 32px 67px
+    order: 2
+    z-index: 2
   @include media(mobile)
     width: 100%
     padding: 50px 17px 37px
     margin-top: -15px
+    order: 2
+    z-index: 2
+.small-on-tablet
+  @include media(to_tablet)
+    width: 70%
 
 
 
@@ -210,9 +221,10 @@
   .slick-slide
     @include media(mobile)
       margin-bottom: 85px
-    img
-      @include media(to_tablet)
-        width: 100%
+  img
+    height: 545px
+    @include media(to_tablet)
+      width: 100%
   .slick-slide>div
     font-size: 14px
     color: $black
