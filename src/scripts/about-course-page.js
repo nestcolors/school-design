@@ -50,7 +50,7 @@ const aboutCoursePage = () => {
       arrows: true,
       dots: false,
       centerMode: true,
-      fade: true,
+      // fade: true,
       centerPadding: '0px',
       responsive: [
         {
@@ -118,10 +118,11 @@ const aboutCoursePage = () => {
 
     });
     $('.cr-courses-slider').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: false,
+      slidesToShow: 3,
+      // slidesToScroll: 2,
+      // arrows: true,
+      // infinite: false,
+      // cssEase: 'linear',
       responsive: [
         {
           breakpoint: 992,
