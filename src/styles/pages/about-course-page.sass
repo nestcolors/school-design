@@ -17,10 +17,14 @@
   .cr-flex-table
     margin-top: 0
   @include media(mobile)
-    padding: 23px 15px 80px 15px
+    padding: 23px 15px 0px 15px
 .cr-hero-container
   height: 620px
   position: relative
+  @include media(to_tablet)
+    height: 575px
+  @include media(mobile)
+    height: 310px
   .cr-hero
     height: 620px
     width: 100%
@@ -32,13 +36,11 @@
     animation-name: bg-size
     animation-duration: 30s
     animation-timing-function: linear
-    animation-iteration-count: infinite
     animation-direction: alternate
-.cr-black-board.course-result
-  padding: 70px 50px 90px 70px
-  @include media(to_tablet)
-    padding: 0
-    margin: 0
+    @include media(to_tablet)
+      height: 575px
+    @include media(mobile)
+      height: 310px
 .cr-course-block__footer
   margin-top: 35px
   &.fixed-to-screen
@@ -76,9 +78,6 @@
 
 .m-top-25
   margin-top: 20px
-.recommended-courses
-  top: 0
-  margin: 30px 0 50px
 .cr-courses__item .slick-cloned
   margin: 0 50px
 .no-margin-tablet
@@ -97,3 +96,27 @@
   @include media(mobile)
     display: flex
     flex-wrap: wrap
+.cr-button-registration
+  float: left
+  bottom: 40px
+  left: -70px
+  @include media(to_tablet)
+    float: right
+    bottom: 40px
+    left: 239px
+  @include media(mobile)
+    float: none
+    bottom: 0
+    left: 0
+.mod-left
+  left: -475px
+  &:after
+    display: none
+  &:before
+    display: none
+  @include media(mobile)
+    width: 218px;
+    margin: 0 auto;
+    margin-bottom: 38px;
+    display: block
+    padding: 10px

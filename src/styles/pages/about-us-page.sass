@@ -18,7 +18,7 @@
 
 .cr-black-board
   width: 527px
-  padding: 30px 50px 30px 70px
+  padding: 30px 50px 70px 70px
   background-color: $dark
   color: #fff
   position: relative
@@ -60,6 +60,8 @@
       margin-top: 40px
       &:first-letter
         padding-left: 20px
+    @include media(mobile)
+      text-align: left
   p
     font-size: 18px
     margin-bottom: 25px
@@ -69,17 +71,17 @@
       margin-bottom: 45px
       text-align: left
   .cr-button
-    color: #fff
+    color: $white
     float: right
+    background: $dark
     @include media(to_tablet)
-      position: relative
-      left: 73px
+      left: 46px
     @include media(mobile)
       left: 0
       float: none
   @include media(to_tablet)
-    width: 100%
     padding: 0 0 0 69px
+    width: auto
   @include media(mobile)
     padding: 0
     left: 0
@@ -89,3 +91,12 @@
   @include media(to_tablet)
     bottom: 0
     margin-top: 50px
+.recommended-courses
+  top: 0
+  margin: 30px 0 50px
+  @include media(mobile)
+    margin: 0
+.cr-courses__item .slick-cloned
+  margin: 0 50px
+
+

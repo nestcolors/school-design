@@ -3,8 +3,16 @@
 	width: 262px !important
 	height: 324px
 	padding: 13px 11px 18px 11px
-	margin: 0 26px
 	transition-duration: 0.2s
+	margin-bottom: 30px
+	&+.cr-courses__item
+		margin-right: 30px
+	@include media(to_tablet)
+		&+.cr-courses__item
+			margin-right: 30px
+	@include media(mobile)
+		&+.cr-courses__item
+			margin-right: 15px
 	.cr-courses__chose-level
 		font-family: $semibold
 		font-size: 16px
@@ -20,8 +28,7 @@
 		-webkit-appearance: none
 		-moz-appearance: none
 		appearance: none
-	.course-start
-		font-size: 16px
+	.course-startcr-courses__item
 		font-family: $regular
 		letter-spacing: 1.6px
 		color: $dark

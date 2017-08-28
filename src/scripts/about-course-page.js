@@ -60,15 +60,6 @@ const aboutCoursePage = () => {
             dots: true
           }
         }
-      ],
-      responsive: [
-        {
-          breakpoint: 768,
-          settings: {
-            arrows: false,
-            dots: true
-          }
-        }
       ]
     });
     $('.cr-people-slider').slick({
@@ -127,7 +118,7 @@ const aboutCoursePage = () => {
 
     });
     $('.cr-courses-slider').slick({
-      slidesToShow: 3,
+      slidesToShow: 2,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
@@ -135,9 +126,7 @@ const aboutCoursePage = () => {
         {
           breakpoint: 992,
           settings: {
-            centerMode: true,
-            centerPadding: '150px',
-            slidesToShow: 2,
+            slidesToShow: 3,
             slidesToScroll: 1,
             arrows: false,
             dots: true
@@ -146,30 +135,6 @@ const aboutCoursePage = () => {
         {
           breakpoint: 768,
           settings: {
-            centerMode: true,
-            centerPadding: '150px',
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true
-          }
-        },
-         {
-          breakpoint: 692,
-          settings: {
-            centerMode: true,
-            centerPadding: '200px',
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            centerMode: true,
-            centerPadding: '10px',
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -177,7 +142,6 @@ const aboutCoursePage = () => {
           }
         }
       ]
-
     });
   });
 
