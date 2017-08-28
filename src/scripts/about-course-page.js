@@ -84,8 +84,8 @@ const aboutCoursePage = () => {
         {
           breakpoint: 768,
           settings: {
-            centerMode: true,
-            centerPadding: '150px',
+            // centerMode: true,
+            // centerPadding: '150px',
             slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
@@ -134,9 +134,9 @@ const aboutCoursePage = () => {
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 770,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
             dots: true

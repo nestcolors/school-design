@@ -26,7 +26,7 @@
   @include media(mobile)
     height: 310px
   .cr-hero
-    height: 620px
+    height: 920px
     width: 100%
     background-repeat: repeat-x
     background-size: cover
@@ -38,10 +38,16 @@
     animation-iteration-count: infinite
     animation-timing-function: linear
     animation-direction: alternate
+    @include media(xwide)
+      max-height: 820px
     @include media(to_tablet)
       height: 575px
+      background-size: 100%
+      background-position: top
     @include media(mobile)
       height: 310px
+      background-size: 100%
+      background-position: top
 .cr-course-block__footer
   margin-top: 35px
   &.fixed-to-screen
@@ -78,7 +84,10 @@
   line-height: 1.17
   letter-spacing: 2px
   text-transform: uppercase
-
+.about-course-our-works .cr-black-board
+  @include media(wide)
+     margin-top: 50px
+     padding-bottom: 90px
 .m-top-25
   margin-top: 20px
 .cr-courses__item .slick-cloned

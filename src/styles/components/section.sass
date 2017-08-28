@@ -14,6 +14,8 @@
         margin-bottom: 0
   &.mod-margin-to-hero
     margin-top: -230px
+    @include media(xwide)
+      margin-top: -100px
     @include media(to_tablet)
       margin-top: -150px
     @include media(mobile)
@@ -23,9 +25,9 @@
   @extend h1
   text-transform: uppercase
   letter-spacing: 13px
-  margin-bottom: 90px
+  margin-bottom: 30px
   @include media(to_tablet)
-    margin-bottom: 28px;
+    margin-bottom: 28px
   @include media(mobile)
     margin: 10px 0
     line-height: 45px
