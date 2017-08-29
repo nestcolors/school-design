@@ -50,7 +50,7 @@ const aboutCoursePage = () => {
       arrows: true,
       dots: false,
       centerMode: true,
-      fade: true,
+      // fade: true,
       centerPadding: '0px',
       responsive: [
         {
@@ -84,8 +84,8 @@ const aboutCoursePage = () => {
         {
           breakpoint: 768,
           settings: {
-            centerMode: true,
-            centerPadding: '150px',
+            // centerMode: true,
+            // centerPadding: '150px',
             slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
@@ -123,6 +123,11 @@ const aboutCoursePage = () => {
       arrows: true,
       dots: false,
       infinite: true,
+      slidesToShow: 3,
+      // slidesToScroll: 2,
+      // arrows: true,
+      // infinite: false,
+      // cssEase: 'linear',
       responsive: [
         {
           breakpoint: 992,
@@ -134,9 +139,9 @@ const aboutCoursePage = () => {
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 770,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
             dots: true

@@ -11,6 +11,7 @@
     padding-bottom: 15px
     font-size: 16px
   tbody
+    transition: 0.2s
     @include media(to_tablet)
       background-color: #F6F2F2
       border-top: 10px solid #F6F2F2
@@ -20,10 +21,16 @@
     td
       padding-bottom: 40px
       vertical-align: top
+    &:hover
+      cursor: pointer
+      color: #7dc5ba
+      .cr-table__row-caption>div
+        background-color: $mint
+        color: $white
 .cr-table__row-caption
   font-family: $bold
   font-size: 18px
-  padding-right: 155px
+  padding-right: 100px
   text-align: right
   letter-spacing: 1.8px
   @include media(mobile)
