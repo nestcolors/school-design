@@ -23,3 +23,54 @@
   padding-bottom: 21px
   @include media(mobile)
     padding-top: 0
+
+.cr-events-container
+  font-size: 16px
+  color: $black
+.courses-link .row
+  position: relative
+  margin-bottom: 48px
+  margin-left: 0
+  margin-right: 0
+  padding: 20px 0
+  @include media(mobile)
+    background: rgba(192, 192, 192, .1)
+.about-course-title
+  font-size: 18px
+  text-transform: uppercase
+.about-course-title
+  &:nth-child(2)
+    font-size: 16px
+    padding-left: 0
+    padding-top: 12px
+    margin-top: -2px
+    @include media(mobile)
+      margin-top: -10px !important
+      margin-bottom: 50px
+.cr-events-container a 
+  color: $black
+  &:hover
+    color: $mint
+    text-decoration: none
+    .about-course-title
+      color: $white
+      background: $mint
+    @include media(mobile)
+      color: $black
+      text-decoration: none
+      .about-course-title
+        color: $black
+        background: none
+.t-bold
+  margin-top: 12px
+.courses-link .row div
+  &:last-child
+    @include media(mobile)
+      margin-top: 20px
+.courses-link div
+  &:first-child
+    @include media(mobile)
+      margin-top: 0
+.pull-right
+  @include media(mobile)
+    float: none !important

@@ -96,7 +96,7 @@ const aboutCoursePage = () => {
           breakpoint: 692,
           settings: {
             centerMode: true,
-            centerPadding: '200px',
+            centerPadding: '250px',
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -118,6 +118,11 @@ const aboutCoursePage = () => {
 
     });
     $('.cr-courses-slider').slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      infinite: true,
       slidesToShow: 3,
       // slidesToScroll: 2,
       // arrows: true,
@@ -137,6 +142,15 @@ const aboutCoursePage = () => {
           breakpoint: 770,
           settings: {
             slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
             dots: true

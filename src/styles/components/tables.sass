@@ -30,9 +30,11 @@
 .cr-table__row-caption
   font-family: $bold
   font-size: 18px
-  padding-right: 155px
+  padding-right: 100px
   text-align: right
   letter-spacing: 1.8px
+  @include media(to_tablet)
+    padding-right: 80px
   @include media(mobile)
     padding-right: 0
     text-align: left
