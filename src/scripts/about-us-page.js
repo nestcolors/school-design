@@ -60,10 +60,10 @@ const aboutUsPage = () => {
       ]
     });
     $('.cr-people-slider').slick({
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      centerMode: true,
-      centerPadding: '150px',
+      // centerMode: true,
+      // centerPadding: '150px',
       arrows: true,
       dots: false,
       responsive: [
