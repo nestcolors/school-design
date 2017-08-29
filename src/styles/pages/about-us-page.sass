@@ -7,9 +7,10 @@
 .cr-text-block__big-title
   @extend h1
   text-transform: uppercase
-  letter-spacing: 12.4px
+  letter-spacing: -6px
   @include media(to_tablet)
     color: #fbf7f6
+    letter-spacing: -2px
   @include media(mobile)
     font-size: 35px
     line-height: 1.89
@@ -23,6 +24,14 @@
   color: #fff
   position: relative
   margin-left: -70px
+  @include media(xwide)
+    &.cooperation
+      padding: 30px 50px 110px 70px !important
+      margin-top: 50px !important
+  @include media(wide)
+    &.cooperation
+      padding: 30px 50px 70px 70px
+      margin-top: 0px
   @include media(tablet)
     background-color: transparent
   @include media(mobile)
