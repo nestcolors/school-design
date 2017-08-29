@@ -122,6 +122,7 @@ const aboutCoursePage = () => {
       slidesToScroll: 1,
       arrows: true,
       dots: false,
+      infinite: true,
       responsive: [
         {
           breakpoint: 992,
