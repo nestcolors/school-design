@@ -1,5 +1,9 @@
 .modal-view
   padding-top: 0
+  @include media(tablet)
+    margin-top: -45px
+  @include media(mobile)
+    margin-top: -45px
   .mod-black
     background: #000
     margin-top: 0
@@ -7,9 +11,9 @@
     // cursor: url(~/src/images/icons/cursor-close-icon.png), auto
     z-index: 99
     .modal-body
-      	cursor: default
-        position: relative
-        z-index: 999
+      cursor: default
+      position: relative
+      z-index: 999
     .close-icon
       display: block
       background: url(~/src/images/icons/close-icon.png)
