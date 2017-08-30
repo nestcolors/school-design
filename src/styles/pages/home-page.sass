@@ -1,10 +1,14 @@
 .cr-hero
   max-height: 620px
+  margin-top: 116px
   @include media(xwide)
     max-height: 820px
   overflow: hidden
   position: relative
+  @include media(tablet)
+    margin-top: 0px
   @include media(mobile)
+    margin-top: 0px
     height: 309px
     img
       width: 100%
@@ -47,7 +51,7 @@
     @include media(mobile)
       margin-top: -10px !important
       margin-bottom: 50px
-.cr-events-container a 
+.cr-events-container a
   color: $black
   &:hover
     color: $mint
