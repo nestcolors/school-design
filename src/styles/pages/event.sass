@@ -56,43 +56,106 @@
 	margin-left: 100px
 	margin-top: 40px
 	float: left
+	@include media(to_tablet)
+		margin-left: 0
 	&:after
 	    content: ''
 	    position: absolute
 	    left: 50px
-	    top: 59px
+	    top: 65px
 	    border-top: 1px solid $white
 	    width: 34px
+	    @include media(to_tablet)
+	    	top: 25px
+	    	left: 15px
+	    @include media(mobile)
+	    	left: 15px
+	    	top: 30px
 	&:before
-	    content: ''
-	    position: absolute
-	    left: 50px
-	    top: 56px
-	    width: 8px
-	    height: 8px
-	    border-top: 1px solid $white
-	    border-right: 1px solid $white
-	    transform: rotate(-135deg)
+		content: ''
+		position: absolute
+		left: 50px
+		top: 62px
+		width: 8px
+		height: 8px
+		border-top: 1px solid $white
+		border-right: 1px solid $white
+		transform: rotate(-135deg)
+		@include media(to_tablet)
+	    	top: 22px
+	    	left: 15px
+		@include media(mobile)
+			left: 15px
+			top: 27px
+	&:hover
+		color: $white
+		cursor: pointer
+		text-decoration: none
+	&:focus
+		color: $white
+		text-decoration: none
+		border: none
+	.about-course-title
+		font-size: 18px
+		font-family: $bold
+		text-transform: uppercase
+	div
+		font-size: 16px
+		font-family: $light
 .next-ivent
 	color: $white
 	font-size: 18px
 	margin-right: 100px
 	margin-top: 40px
 	float: right
+	@include media(to_tablet)
+		margin-right: 0
+	@include media(mobile)
+		margin-right: 50px
+		margin-top: -5px
 	&:after
 	    content: ''
 	    position: absolute
 	    right: 50px
-	    top: 59px
+	    top: 65px
 	    border-top: 1px solid $white
 	    width: 34px
+	    @include media(to_tablet)
+	    	top: 25px
+	    	right: 15px
+	    @include media(mobile)
+	    	right: 15px
+	    	top: 30px
 	&:before
-	    content: ''
-	    position: absolute
-	    right: 50px
-	    top: 56px
-	    width: 8px
-	    height: 8px
-	    border-top: 1px solid $white
-	    border-right: 1px solid $white
-	    transform: rotate(45deg)
+		content: ''
+		position: absolute
+		right: 50px
+		top: 62px
+		width: 8px
+		height: 8px
+		border-top: 1px solid $white
+		border-right: 1px solid $white
+		transform: rotate(45deg)
+		@include media(to_tablet)
+	    	top: 22px
+	    	right: 15px
+		@include media(mobile)
+	    	right: 15px
+	    	top: 27px
+	&:focus
+		color: $white
+		text-decoration: none
+		border: none
+	&:hover
+		color: $white
+		cursor: pointer
+		text-decoration: none
+	.about-course-title
+		font-size: 18px
+		font-family: $bold
+		text-transform: uppercase
+		float: right
+	div
+		float: right
+		font-size: 16px
+		font-family: $light
