@@ -60,19 +60,34 @@
 	    content: ''
 	    position: absolute
 	    left: 50px
-	    top: 59px
+	    top: 65px
 	    border-top: 1px solid $white
 	    width: 34px
 	&:before
-	    content: ''
-	    position: absolute
-	    left: 50px
-	    top: 56px
-	    width: 8px
-	    height: 8px
-	    border-top: 1px solid $white
-	    border-right: 1px solid $white
-	    transform: rotate(-135deg)
+		content: ''
+		position: absolute
+		left: 50px
+		top: 62px
+		width: 8px
+		height: 8px
+		border-top: 1px solid $white
+		border-right: 1px solid $white
+		transform: rotate(-135deg)
+	&:hover
+		color: $white
+		cursor: pointer
+		text-decoration: none
+	&:focus
+		color: $white
+		text-decoration: none
+		border: none
+	.about-course-title
+		font-size: 18px
+		font-family: $bold
+		text-transform: uppercase
+	div
+		font-size: 16px
+		font-family: $light
 .next-ivent
 	color: $white
 	font-size: 18px
@@ -83,16 +98,33 @@
 	    content: ''
 	    position: absolute
 	    right: 50px
-	    top: 59px
+	    top: 65px
 	    border-top: 1px solid $white
 	    width: 34px
 	&:before
-	    content: ''
-	    position: absolute
-	    right: 50px
-	    top: 56px
-	    width: 8px
-	    height: 8px
-	    border-top: 1px solid $white
-	    border-right: 1px solid $white
-	    transform: rotate(45deg)
+		content: ''
+		position: absolute
+		right: 50px
+		top: 62px
+		width: 8px
+		height: 8px
+		border-top: 1px solid $white
+		border-right: 1px solid $white
+		transform: rotate(45deg)
+	&:focus
+		color: $white
+		text-decoration: none
+		border: none
+	&:hover
+		color: $white
+		cursor: pointer
+		text-decoration: none
+	.about-course-title
+		font-size: 18px
+		font-family: $bold
+		text-transform: uppercase
+		float: right
+	div
+		float: right
+		font-size: 16px
+		font-family: $light
