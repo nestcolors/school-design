@@ -1,0 +1,121 @@
+.cr-spaces
+	padding-top: 35px
+	position: relative
+	height: 100vh
+	@include media(mobile)
+		padding-top: 10px
+		overflow: visible
+	.cr-header__link
+		color: $white
+		font-family: $regular
+		font-size: 14px
+		margin-right: 40px
+		&:hover
+			font-size: 14px
+			font-family: $regular
+			border-bottom: none
+			color: $white
+			font-weight: normal
+		@include media(mobile)
+			font-size: 12px
+			margin-right: 20px
+	.close-icon
+		right: 30px !important
+		top: 50px
+	.cr-horizontal-list
+		position: absolute
+	.arrow-right
+		margin-left: 7px
+	.t-bold
+		font-size: 18px
+		margin-top: 32px
+		@include media(mobile)
+			font-size: 14px
+			letter-spacing: 0.7px
+	h3
+		font-weight: normal
+		font-family: $regular
+		@include media(mobile)
+			font-size: 14px
+			letter-spacing: 0.7px
+	h5
+		font-weight: normal
+		font-family: $regular
+		margin: 0
+		margin-bottom: 8px
+		@include media(mobile)
+			font-size: 14px
+		&:first-child
+			margin-top: 32px
+		&:last-child
+			margin-bottom: 40px
+	.cr-spaces-map
+		width: 100%
+		height: 220px
+		border: none
+.cr-spaces-container
+	position: relative
+	top: 150px
+	@include media(mobile)
+		top: 230px
+	.row
+		@include media(mobile)
+			margin: 0
+		.col-md-4
+			background-color: #fff
+.cr-spaces-slider
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	margin-bottom: 0 !important
+	.slick-list
+		padding-bottom: 0
+	img
+		width: 100%
+		height: 100vh
+	.slick-prev
+		bottom: 530px
+		right: 700px
+		z-index: 1
+		width: 40px
+		height: 40px
+		border: 1px solid #fff
+		&:before
+			border-top: 1px solid #fff
+			left: 8px
+			top: 18px
+		&:after
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+			left: 8px
+			top: 14px
+		&:hover
+			background-color: $dark
+	.slick-next
+		bottom: 530px
+		right: 650px
+		z-index: 1
+		width: 40px
+		height: 40px
+		border: 1px solid #fff
+		&:before
+			border-top: 1px solid #fff
+			top: 18px
+			right: 8px
+		&:after
+			border-top: 1px solid #fff
+			border-right: 1px solid #fff
+			top: 14px
+			right: 7px
+		&:hover
+			background-color: $dark
+	.slick-dots
+		right: 0
+		bottom: 500px
+		z-index: 1
+		li
+			button
+				&:before
+					font-size: 10px
+					color: #fff

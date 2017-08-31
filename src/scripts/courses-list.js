@@ -38,3 +38,11 @@ const coursesList = () => {
 }
 
 export default coursesList;
+
+$(document).ready(function(){
+    $('.cr-spaces-slider').slick({
+      arrows: true,
+      dots: true
+    });
+
+});
