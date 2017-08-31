@@ -56,6 +56,8 @@
 	margin-left: 100px
 	margin-top: 40px
 	float: left
+	@include media(to_tablet)
+		margin-left: 0
 	&:after
 	    content: ''
 	    position: absolute
@@ -63,6 +65,12 @@
 	    top: 65px
 	    border-top: 1px solid $white
 	    width: 34px
+	    @include media(to_tablet)
+	    	top: 25px
+	    	left: 15px
+	    @include media(mobile)
+	    	left: 15px
+	    	top: 30px
 	&:before
 		content: ''
 		position: absolute
@@ -73,6 +81,12 @@
 		border-top: 1px solid $white
 		border-right: 1px solid $white
 		transform: rotate(-135deg)
+		@include media(to_tablet)
+	    	top: 22px
+	    	left: 15px
+		@include media(mobile)
+			left: 15px
+			top: 27px
 	&:hover
 		color: $white
 		cursor: pointer
@@ -94,6 +108,11 @@
 	margin-right: 100px
 	margin-top: 40px
 	float: right
+	@include media(to_tablet)
+		margin-right: 0
+	@include media(mobile)
+		margin-right: 50px
+		margin-top: -4px
 	&:after
 	    content: ''
 	    position: absolute
@@ -101,6 +120,12 @@
 	    top: 65px
 	    border-top: 1px solid $white
 	    width: 34px
+	    @include media(to_tablet)
+	    	top: 25px
+	    	right: 15px
+	    @include media(mobile)
+	    	right: 15px
+	    	top: 30px
 	&:before
 		content: ''
 		position: absolute
@@ -111,6 +136,12 @@
 		border-top: 1px solid $white
 		border-right: 1px solid $white
 		transform: rotate(45deg)
+		@include media(to_tablet)
+	    	top: 22px
+	    	right: 15px
+		@include media(mobile)
+	    	right: 15px
+	    	top: 27px
 	&:focus
 		color: $white
 		text-decoration: none
