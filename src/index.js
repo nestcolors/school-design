@@ -17,9 +17,6 @@ if (window.location.pathname === '/courses-list.html') {
   aboutUsPage();
 }else if (window.location.pathname === '/about-course-page.html') {
   aboutCoursePage();
-}
-
-else {
+} else {
   dummyFoo();
 }
-
