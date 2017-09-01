@@ -42,7 +42,15 @@ export default coursesList;
 $(document).ready(function(){
     $('.cr-spaces-slider').slick({
       arrows: true,
-      dots: true
+      dots: true,
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            arrows: false
+          }
+        }
+      ]
     });
 
 });
