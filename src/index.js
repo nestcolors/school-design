@@ -3,6 +3,7 @@ import coursesList from './scripts/courses-list.js';
 import homePage from './scripts/home-page.js';
 import aboutUsPage from './scripts/about-us-page.js';
 import aboutCoursePage from './scripts/about-course-page.js';
+import spaces from './scripts/spaces.js';
 require('./styles/style.sass');
 
 console.log('i`m index js file');

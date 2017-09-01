@@ -158,6 +158,7 @@ const aboutCoursePage = () => {
         }
       ]
     });
+
   });
 
   window.onscroll = function() {showBar()};
@@ -178,3 +179,6 @@ const aboutCoursePage = () => {
 
 }
 export default aboutCoursePage;
+
+
+
