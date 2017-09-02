@@ -8,23 +8,35 @@
   position: relative
   letter-spacing: 1.6px
   cursor: pointer
+  &:hover
+    background: $dark
+    color: $white
+    &:after
+      right: 12px
+      border-color: $white
+      width: 43px
+    &:before
+      right: 12px
+      border-color: $white
   &:after
     content: ''
     position: absolute
-    right: 15px
+    right: 21px
     top: 19px
     border-top: 1px solid $dark
     width: 34px
+    transition: 0.2s
   &:before
     content: ''
     position: absolute
-    right: 15px
-    top: 16px
+    right: 21px
+    top: 15.5px
     width: 8px
     height: 8px
     border-top: 1px solid $dark
     border-right: 1px solid $dark
     transform: rotate(45deg)
+    transition: 0.2s
   &.mod-white
     border-color: #fff
     color: #fff
@@ -61,18 +73,27 @@
   &:hover
     color: $white
     text-decoration: underline
-.cr-button--vertical
+button.cr-button--vertical
   @extend .cr-button
   width: 58px
   height: 126px
   padding: 0
   position: relative
   cursor: pointer
+  &:hover
+    background: $dark
+    color: $white
+    &:after
+      right: -16.5px !important
+      bottom: 8px
+    &:before
+      right: 22px !important
+      bottom: 8px
   .cr-button__label
-    position: absolute;
-    top: 35px;
-    white-space: nowrap;
-    left: 50%;
+    position: absolute
+    top: 35px
+    white-space: nowrap
+    left: 50%
     transform: translate(-50%, 0)
     letter-spacing: 9.6px
     font-size: 16px
@@ -190,7 +211,7 @@
     &:before
       content: ''
       display: none
-      
+
 .cr-button-registration
   border: 2px solid $mint
   padding: 10px 20px 10px 20px

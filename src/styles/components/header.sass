@@ -22,10 +22,11 @@
   color: $dark
   font-family: $regular
   text-transform: uppercase
+  letter-spacing: 1.5px
+  font-weight: bold
   &:hover, &.mod-active
     text-decoration: none
     color: #7dc5ba
-    font-weight: bold
     border-bottom: 4px solid #7dc5ba
     padding-bottom: 18px
 
@@ -79,6 +80,8 @@
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+  img
+    height: 20px
   @include media(to_tablet)
     top: 16px
     transform: translate(-50%)
@@ -106,6 +109,7 @@ body
   .cr-header__logo
     width: 89px
     img
+      height: 20px
       max-width: 100%
 .cr-burger-btn
   position: absolute
