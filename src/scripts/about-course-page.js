@@ -49,9 +49,9 @@ const aboutCoursePage = () => {
     $('.cr-our-works').slick({
       arrows: true,
       dots: false,
-      centerMode: true,
+      // centerMode: true,
       // fade: true,
-      centerPadding: '0px',
+      // centerPadding: '0px',
       responsive: [
         {
           breakpoint: 992,
@@ -63,18 +63,14 @@ const aboutCoursePage = () => {
       ]
     });
     $('.cr-people-slider').slick({
-      slidesToShow: 2,
+      slidesToShow: 3,
       slidesToScroll: 1,
-      centerMode: true,
-      centerPadding: '200px',
       arrows: true,
       dots: false,
       responsive: [
         {
           breakpoint: 992,
           settings: {
-            centerMode: true,
-            centerPadding: '150px',
             slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
@@ -84,8 +80,6 @@ const aboutCoursePage = () => {
         {
           breakpoint: 768,
           settings: {
-            // centerMode: true,
-            // centerPadding: '150px',
             slidesToShow: 2,
             slidesToScroll: 1,
             arrows: false,
@@ -95,8 +89,6 @@ const aboutCoursePage = () => {
          {
           breakpoint: 692,
           settings: {
-            centerMode: true,
-            centerPadding: '250px',
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -106,8 +98,6 @@ const aboutCoursePage = () => {
         {
           breakpoint: 480,
           settings: {
-            centerMode: true,
-            centerPadding: '10px',
             slidesToShow: 1,
             slidesToScroll: 1,
             arrows: false,
@@ -179,6 +169,3 @@ const aboutCoursePage = () => {
 
 }
 export default aboutCoursePage;
-
-
-
