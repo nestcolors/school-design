@@ -2,6 +2,7 @@
 	padding-top: 35px
 	position: relative
 	height: 100vh
+	overflow: hidden
 	@include media(mobile)
 		padding-top: 10px
 		overflow: visible
@@ -18,49 +19,58 @@
 			font-weight: normal
 		@include media(mobile)
 			font-size: 12px
-			margin-right: 20px
+			margin-right: 0
 	.close-icon
-		right: 30px !important
+		right: 40px !important
 		top: 50px
 	.cr-horizontal-list
 		position: absolute
 		margin: 0
 	.arrow-right
 		margin-left: 7px
-	.t-bold
-		font-size: 18px
-		margin-top: 32px
-		margin-bottom: 40px
-		@include media(mobile)
-			font-size: 14px
-			letter-spacing: 0.7px
-			margin-bottom: 40px
-			margin-top: 20px
-	h3
+	a
+		color: $dark
 		font-weight: normal
 		font-family: $regular
-		margin: 0 0 40px
+		padding-left: 15px
+		&:hover
+			text-decoration: none
+			font-family: $bold
+			&:after
+				content: ''
+			    position: absolute
+			    right: 15px
+			    top: 16px
+			    width: 8px
+			    height: 8px
+			    font-size: 48px
+			    border-top: 1px solid $dark
+			    border-right: 1px solid $dark
+			    transform: rotate(45deg)
 		@include media(mobile)
 			font-size: 14px
 			letter-spacing: 0.7px
 			margin-bottom: 45px
 	ul
 		margin: 30px 0 40px
+
 		@include media(mobile)
-			margin: 20px 0 25px
+			margin: 20px 0 20px
 		li
-			list-style-type: none
 			font-weight: normal
 			font-family: $regular
 			margin: 0
 			&+li
-				margin-top: 20px
+				margin-top: 10px
 				@include media(mobile)
 					margin-top: 10px
 	.cr-spaces-map
 		width: 100%
 		height: 220px
 		border: none
+		iframe
+			width: 100
+			height: 220px
 .cr-spaces-container
 	position: relative
 	top: 150px
@@ -71,6 +81,7 @@
 			margin: 0
 		.col-md-4
 			background-color: #fff
+			padding: 0
 			@include media(mobile)
 				padding: 0
 .cr-spaces-slider
@@ -88,12 +99,15 @@
 		background-size: cover !important
 		background-repeat: no-repeat !important
 	.slick-prev
-		bottom: 0px
-		right: 700px
+		top: 734px
+		right: 490px
 		z-index: 1
 		width: 40px
 		height: 40px
 		border: 1px solid #fff
+		@include media(to_tablet)
+			top: 693px
+			right: 455px
 		&:before
 			border-top: 1px solid #fff
 			left: 8px
@@ -106,12 +120,15 @@
 		&:hover
 			background-color: $dark
 	.slick-next
-		bottom: 0px
-		right: 650px
+		top: 734px
+		right: 440px
 		z-index: 1
 		width: 40px
 		height: 40px
 		border: 1px solid #fff
+		@include media(to_tablet)
+			top: 693px
+			right: 395px
 		&:before
 			border-top: 1px solid #fff
 			top: 18px
@@ -124,9 +141,12 @@
 		&:hover
 			background-color: $dark
 	.slick-dots
-		right: 0
-		bottom: 0px
+		top: 735px
+		right: -375px
 		z-index: 1
+		@include media(to_tablet)
+			top: 690px
+			right: -340px
 		@include media(mobile)
 			top: 180px
 			right: -100px
@@ -135,3 +155,10 @@
 				&:before
 					font-size: 10px
 					color: #fff
+.cr-spaces-map
+	iframe
+		border: none
+		width: 100%
+
+
+
