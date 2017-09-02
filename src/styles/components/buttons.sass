@@ -120,6 +120,8 @@ button.cr-button--vertical
   font-size: 16px
   letter-spacing: 1.6px
   cursor: pointer
+  &:hover
+    color: $dark
 
 .cr-link--white
   color: $white
@@ -132,6 +134,13 @@ button.cr-button--vertical
   line-height: 25px
   color: $dark
   font-family: $bold
+  text-decoration: none
+  &:hover
+    color: $mint
+    text-decoration: none
+    &:after, &:before
+      left: -5px
+      transition: 0.2s
   &:after
     content: ''
     position: absolute
@@ -154,7 +163,7 @@ button.cr-button--vertical
   background-color: $mint
   color: #fff
   height: 40px
-  line-height: 40px
+  line-height: 39px
   padding: 0 42px
   border: none
   box-shadow: none
@@ -163,8 +172,12 @@ button.cr-button--vertical
   font-size: 16px
   cursor: pointer
   margin-left: 25px
+  border: 2px solid $mint
   @include media(mobile)
     margin-top: 25px
+  &:hover
+    background-color: $white
+    color: $mint
 
 
 .cr-button-sign-in
