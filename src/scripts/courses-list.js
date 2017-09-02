@@ -43,7 +43,6 @@ $(document).ready(function(){
     $('.cr-spaces-slider').slick({
       arrows: true,
       dots: true,
-      cssEase: 'easeInOutBack',
       responsive: [
         {
           breakpoint: 768,
