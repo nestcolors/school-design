@@ -3,7 +3,10 @@ import homePage from './scripts/home-page.js';
 import aboutUsPage from './scripts/about-us-page.js';
 import aboutCoursePage from './scripts/about-course-page.js';
 import spaces from './scripts/spaces.js';
+import general from './scripts/general.js';
 require('./styles/style.sass');
+
+general();
 
 console.log('i`m index js file: ', window.location.pathname);
 if (window.location.pathname === '/courses-list.html') {
