@@ -1,25 +1,8 @@
 import $ from "jquery";
 import slick from "./slick.min.js"
 
-
 const aboutCoursePage = () => {
   console.log("aboutCoursePa ge");
-  var main_menu = $("#js-main-menu");
-
-  main_menu.find('.cr-panel__item-title').click(function(event) {
-    $(this).siblings(".cr-panel__item-content").toggleClass('mod-open');
-    $(this).toggleClass('mod-active');
-  });
-
-  main_menu.find('.cr-hover-menu').hover(function(event) {
-    $(this).find(".cr-hover-menu__content").toggleClass('mod-open');
-    $(this).find(".cr-hover-menu__title").toggleClass('mod-active');
-  });
-
-  main_menu.find('.cr-accordeon__title').click(function(event) {
-    $(this).toggleClass('mod-active');
-    $(this).siblings(".cr-accordeon__content").toggleClass('mod-open');
-  });
 
   var body = $('body');
   var header = $('#js-header');
@@ -49,9 +32,6 @@ const aboutCoursePage = () => {
     $('.cr-our-works').slick({
       arrows: true,
       dots: false,
-      // centerMode: true,
-      // fade: true,
-      // centerPadding: '0px',
       responsive: [
         {
           breakpoint: 992,
@@ -114,10 +94,6 @@ const aboutCoursePage = () => {
       dots: false,
       infinite: true,
       slidesToShow: 3,
-      // slidesToScroll: 2,
-      // arrows: true,
-      // infinite: false,
-      // cssEase: 'linear',
       responsive: [
         {
           breakpoint: 992,

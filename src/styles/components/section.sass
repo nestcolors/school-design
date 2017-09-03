@@ -1,7 +1,11 @@
 .cr-section
   margin-top: 120px
+  @include media(wide)
+    margin-top: 80px
   &.less-margin
     margin-top: 70px
+  &.sm-margin
+    margin-top: 50px
   &.extra-margin
     margin-top: 150px
   &.mod-no-margin-tablets
@@ -42,6 +46,7 @@
     margin: 10px 0
     line-height: 45px
 .cr-section__header-top
+  margin: 0
   @extend h2
   text-transform: uppercase
   letter-spacing: 2px

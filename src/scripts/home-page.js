@@ -43,9 +43,5 @@ const homePage = () => {
     header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
   });
 }
+
 export default homePage;
-
-
-
-
-
