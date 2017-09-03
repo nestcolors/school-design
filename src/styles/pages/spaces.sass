@@ -6,6 +6,10 @@
 	@include media(mobile)
 		padding-top: 10px
 		overflow: visible
+	.modal-navbar
+		img
+			width: 70px
+			margin-left: 10px
 	.cr-header__link
 		color: $white
 		font-family: $regular
@@ -26,7 +30,7 @@
 		@include media(mobile)
 			right: 20px !important
 	.cr-horizontal-list
-		position: absolute
+		position: fixed
 		margin: 0
 	.arrow-right
 		margin-left: 7px
@@ -75,9 +79,9 @@
 			height: 220px
 .cr-spaces-container
 	position: relative
-	top: 150px
+	margin-top: 150px
 	@include media(mobile)
-		top: 230px
+		margin-top: 450px
 	.row
 		@include media(mobile)
 			margin: 0
@@ -87,7 +91,7 @@
 			@include media(mobile)
 				padding: 0
 .cr-spaces-slider
-	position: absolute
+	position: fixed
 	width: 100%
 	height: 100vh
 	top: 0
@@ -150,8 +154,8 @@
 			top: 690px
 			right: -340px
 		@include media(mobile)
-			top: 180px
-			right: -100px
+			top: 410px
+			right: -140px
 		li
 			button
 				&:before
@@ -161,6 +165,3 @@
 	iframe
 		border: none
 		width: 100%
-
-
-

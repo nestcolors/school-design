@@ -1,5 +1,5 @@
 .cr-header
-  position: absolute
+  position: fixed
   top: 0
   width: 100%
   left: 0
@@ -22,10 +22,11 @@
   color: $dark
   font-family: $regular
   text-transform: uppercase
+  letter-spacing: 1.5px
+  font-weight: bold
   &:hover, &.mod-active
     text-decoration: none
     color: #7dc5ba
-    font-weight: bold
     border-bottom: 4px solid #7dc5ba
     padding-bottom: 18px
 
@@ -79,6 +80,8 @@
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+  img
+    height: 20px
   @include media(to_tablet)
     top: 16px
     transform: translate(-50%)
@@ -95,8 +98,9 @@ body
     right: 25px
     top: 10px
     position: absolute
-    width: 39px
-    height: 39px
+    width: 20px
+    height: 20px
+    background-size: 100%
     background-image: url("/src/images/icons/close-icon.png")
     background-repeat: no-repeat
     background-position: center center
@@ -106,7 +110,9 @@ body
   .cr-header__logo
     width: 89px
     img
+      height: 20px
       max-width: 100%
+      margin-top: -7px
 .cr-burger-btn
   position: absolute
   width: 40px
