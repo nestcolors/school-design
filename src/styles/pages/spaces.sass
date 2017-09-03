@@ -2,7 +2,8 @@ $top-arrows-wide: 585px
 $top-arrows-xwide: 700px
 $top-container-wide: 80px
 $top-container-xwide: 215px
-
+.hidden
+	display: none
 .modal-view .mod-black.cr-spaces
 	padding-top: 35px
 	position: relative
@@ -53,6 +54,8 @@ $top-container-xwide: 215px
 		font-weight: normal
 		font-family: $regular
 		padding-left: 15px
+		cursor: pointer
+		margin: 10px 0 20px
 		&:hover
 			text-decoration: none
 			font-family: $bold
@@ -109,6 +112,13 @@ $top-container-xwide: 215px
 		margin-left: 5%
 	@include media(mobile)
 		margin-top: 450px
+	.space-desc-wrapper
+		margin-left: 10px
+		.space-selector
+			padding-top: 20px
+			.active-link
+				font-family: "Proxima Bold"
+				cursor: not-allowed
 	.map-container
 		height: 220px
 		background-color: green
@@ -121,6 +131,7 @@ $top-container-xwide: 215px
 			@include media(mobile)
 				padding: 0
 .cr-spaces-slider
+	display: none
 	position: fixed
 	width: 100%
 	height: 100vh
@@ -128,6 +139,8 @@ $top-container-xwide: 215px
 	left: 0
 	right: 0
 	margin-bottom: 0 !important
+	&.visible-slider
+		display: block
 	.slick-list
 		padding-bottom: 0
 	.cr-spaces-slider-img
