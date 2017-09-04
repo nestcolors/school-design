@@ -1,7 +1,9 @@
-$top-arrows-wide: 585px
+$top-arrows-wide: 579px
 $top-arrows-xwide: 700px
 $top-container-wide: 80px
-$top-container-xwide: 215px
+$top-container-xwide: 200px
+$bottom-container-xwide: 150px
+
 .hidden
 	display: none
 .modal-view .mod-black.cr-spaces
@@ -19,6 +21,10 @@ $top-container-xwide: 215px
 		img
 			width: 70px
 			margin-left: 10px
+			@include media(wide)
+				margin-right: 40px
+			@include media(mobile)
+				margin-right: 10px
 	.cr-header__link
 		color: $white
 		font-family: $regular
@@ -76,17 +82,13 @@ $top-container-xwide: 215px
 			margin-bottom: 45px
 	ul
 		margin: 30px 0 40px
-
+		list-style-type: none
 		@include media(mobile)
 			margin: 20px 0 20px
 		li
 			font-weight: normal
 			font-family: $regular
 			margin: 0
-			&+li
-				margin-top: 10px
-				@include media(mobile)
-					margin-top: 10px
 	.cr-spaces-map
 		width: 100%
 		height: 220px
@@ -102,7 +104,8 @@ $top-container-xwide: 215px
 	@include media(wide)
 		margin-top: $top-container-wide
 	@include media(xwide)
-		margin-top: $top-container-xwide
+		margin-top: 0
+		bottom: $bottom-container-xwide
 	@include media(to_mobile)
 		margin: 350px 0 0
 		position: relative
@@ -116,9 +119,30 @@ $top-container-xwide: 215px
 		margin-left: 10px
 		.space-selector
 			padding-top: 20px
-			.active-link
-				font-family: "Proxima Bold"
-				cursor: not-allowed
+			h3
+				position: relative
+				.active-link
+					font-family: "Proxima Bold"
+					cursor: not-allowed
+				.active-link:after
+					content: ""
+					border-bottom: 2px solid black
+					border-right: 2px solid black
+					width: 8px
+					height: 8px
+					position: absolute
+					transform: rotateZ(-45deg)
+					top: 7px
+					right: 20px
+		.space-desc-body
+			font-size: 16px
+			ul
+				padding-left: 10px
+				li
+					margin-top: 10px
+					font-size: 16px
+					@include media(mobile)
+						margin-top: 10px
 	.map-container
 		height: 220px
 		background-color: green
@@ -156,7 +180,8 @@ $top-container-xwide: 215px
 		@include media(wide)
 			top: $top-arrows-wide
 		@include media(xwide)
-			top: $top-arrows-xwide
+			top: initial
+			bottom: $bottom-container-xwide
 		@include media(to_tablet)
 			top: 693px
 			right: 455px
@@ -180,7 +205,8 @@ $top-container-xwide: 215px
 		@include media(wide)
 			top: $top-arrows-wide
 		@include media(xwide)
-			top: $top-arrows-xwide
+			top: initial
+			bottom: $bottom-container-xwide
 		@include media(to_tablet)
 			top: 693px
 			right: 395px
