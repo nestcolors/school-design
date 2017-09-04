@@ -32,10 +32,10 @@
     margin-top: -115px
     margin-bottom: 30px
     @include media(to_tablet)
-      margin-top: 0
+      margin-top: -80px
       margin-bottom: 30px
     @include media(mobile)
-      margin-bottom: 70px
+      margin: 0 0 50px 0
   .cr-social-list
     position: absolute
     right: 100px
@@ -46,11 +46,11 @@
       bottom: 20px
       left: -370px
     @include media(mobile)
-      bottom: -15px
       left: 0
       top: auto
       background: $white
-      padding: 40px 30px 0 130px
+      margin: 0
+      padding: 0
       position: relative
   .close-icon
     bottom: 100px
@@ -66,16 +66,6 @@
   div:nth-child(3)
     font-family: $regular
     font-size: 18px
-  .col-md-5
-    margin-bottom: -90px
-  img
-    width: 100%
-    position: relative
-    top: -115px
-  .cr-social-list
-    position: absolute
-    right: 0
-    top: 0
 .members-switcher
   position: relative
   z-index: 9999
