@@ -102,6 +102,13 @@ const aboutCoursePage = () => {
       ]
     });
 
+    $('.cr-reviews-slider').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+    });
+
   });
 
   window.onscroll = function() {showBar()};
