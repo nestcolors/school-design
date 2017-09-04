@@ -39,6 +39,7 @@ const coursesList = () => {
 
 export default coursesList;
 
+
     /*Spaces slider*/
 
 $(document).ready(function(){
@@ -57,6 +58,5 @@ $(document).ready(function(){
   });
 
 });
-
 
 

@@ -1,57 +1,14 @@
 import $ from "jquery";
 import slick from "./slick.min.js"
 
-
 const aboutCoursePage = () => {
-  console.log("aboutCoursePa ge");
-  var main_menu = $("#js-main-menu");
+  console.log("aboutCoursePage");
 
-  main_menu.find('.cr-panel__item-title').click(function(event) {
-    $(this).siblings(".cr-panel__item-content").toggleClass('mod-open');
-    $(this).toggleClass('mod-active');
-  });
-
-  main_menu.find('.cr-hover-menu').hover(function(event) {
-    $(this).find(".cr-hover-menu__content").toggleClass('mod-open');
-    $(this).find(".cr-hover-menu__title").toggleClass('mod-active');
-  });
-
-  main_menu.find('.cr-accordeon__title').click(function(event) {
-    $(this).toggleClass('mod-active');
-    $(this).siblings(".cr-accordeon__content").toggleClass('mod-open');
-  });
-
-  var body = $('body');
-  var header = $('#js-header');
-  var header_fixed_part = header.find('.cr-header__fixed-part');
-  var motto_height = header.find('.cr-header__motto').outerHeight();
-
-  $(window).scroll(function (event) {
-      var scroll = $(window).scrollTop();
-      if (scroll >= motto_height) {
-        header_fixed_part.addClass('mod-fixed');
-      }
-      else {
-        header_fixed_part.removeClass('mod-fixed');
-      }
-  });
-
-  var close_mobile_menu = header.find(".cr-close-btn");
-  close_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').addClass('mod-mobile-menu-closed');
-  });
-  var open_mobile_menu = header.find(".cr-burger-btn");
-  open_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
-  });
   $(document).ready(function(){
 
     $('.cr-our-works').slick({
       arrows: true,
       dots: false,
-      // centerMode: true,
-      // fade: true,
-      // centerPadding: '0px',
       responsive: [
         {
           breakpoint: 992,
@@ -114,10 +71,6 @@ const aboutCoursePage = () => {
       dots: false,
       infinite: true,
       slidesToShow: 3,
-      // slidesToScroll: 2,
-      // arrows: true,
-      // infinite: false,
-      // cssEase: 'linear',
       responsive: [
         {
           breakpoint: 992,

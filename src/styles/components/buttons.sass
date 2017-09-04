@@ -1,3 +1,5 @@
+a
+  text-decoration: none !important
 .cr-button
   border: 2px solid $black
   padding: 10px 70px 10px 20px
@@ -54,9 +56,9 @@
   letter-spacing: 1.6px
   color: $white
   cursor: pointer
+  text-decoration: none
   &:hover
     color: $white
-    text-decoration: underline
 .cr-button-write
   border: 2px solid $mint
   padding: 10px 20px 10px 20px
@@ -68,11 +70,12 @@
   letter-spacing: 1.6px
   color: $white
   cursor: pointer
+  text-decoration: none
   @include media(mobile)
     padding: 10px 32px 10px 32px
   &:hover
-    color: $white
-    text-decoration: underline
+    background-color: $white
+    color: $mint
 button.cr-button--vertical
   @extend .cr-button
   width: 58px
@@ -171,7 +174,7 @@ button.cr-button--vertical
   letter-spacing: 1.6px
   font-size: 16px
   cursor: pointer
-  margin-left: 25px
+  margin: 0 25px
   border: 2px solid $mint
   @include media(mobile)
     margin-top: 25px
@@ -236,8 +239,9 @@ button.cr-button--vertical
   letter-spacing: 1.6px
   color: $white
   cursor: pointer
+  text-decoration: none !important
   @include media(mobile)
     padding: 10px 32px 10px 32px
   &:hover
-    color: $white
-    text-decoration: underline
+    background-color: $white
+    color: $mint

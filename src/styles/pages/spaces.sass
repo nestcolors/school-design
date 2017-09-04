@@ -1,15 +1,30 @@
-.cr-spaces
+$top-arrows-wide: 579px
+$top-arrows-xwide: 700px
+$top-container-wide: 80px
+$top-container-xwide: 200px
+$bottom-container-xwide: 150px
+
+.hidden
+	display: none
+.modal-view .mod-black.cr-spaces
 	padding-top: 35px
 	position: relative
 	height: 100vh
-	overflow: hidden
+	// overflow: hidden
+	padding-bottom: 0
 	@include media(mobile)
 		padding-top: 10px
-		overflow: visible
+		// overflow: visible
 	.modal-navbar
+		position: relative
+		z-index: 999
 		img
 			width: 70px
 			margin-left: 10px
+			@include media(wide)
+				margin-right: 40px
+			@include media(mobile)
+				margin-right: 10px
 	.cr-header__link
 		color: $white
 		font-family: $regular
@@ -25,13 +40,19 @@
 			font-size: 12px
 			margin-right: 0
 	.close-icon
-		right: 40px !important
+		position: absolute
+		z-index: 999
+		right: 100px !important
 		top: 50px
 		@include media(mobile)
 			right: 20px !important
 	.cr-horizontal-list
 		position: fixed
 		margin: 0
+		li
+			a
+				@include media(mobile)
+					margin-left: 20px
 	.arrow-right
 		margin-left: 7px
 	a
@@ -39,6 +60,8 @@
 		font-weight: normal
 		font-family: $regular
 		padding-left: 15px
+		cursor: pointer
+		margin: 10px 0 20px
 		&:hover
 			text-decoration: none
 			font-family: $bold
@@ -59,17 +82,13 @@
 			margin-bottom: 45px
 	ul
 		margin: 30px 0 40px
-
+		list-style-type: none
 		@include media(mobile)
 			margin: 20px 0 20px
 		li
 			font-weight: normal
 			font-family: $regular
 			margin: 0
-			&+li
-				margin-top: 10px
-				@include media(mobile)
-					margin-top: 10px
 	.cr-spaces-map
 		width: 100%
 		height: 220px
@@ -78,10 +97,55 @@
 			width: 100
 			height: 220px
 .cr-spaces-container
-	position: relative
-	margin-top: 150px
+	width: 450px
+	background-color: $white
+	position: absolute
+	right: 100px
+	@include media(wide)
+		margin-top: $top-container-wide
+	@include media(xwide)
+		margin-top: 0
+		bottom: $bottom-container-xwide
+	@include media(to_mobile)
+		margin: 350px 0 0
+		position: relative
+		margin: 450px 0 0
+		right: 0px
+		width: 90%
+		margin-left: 5%
 	@include media(mobile)
 		margin-top: 450px
+	.space-desc-wrapper
+		margin-left: 10px
+		.space-selector
+			padding-top: 20px
+			h3
+				position: relative
+				.active-link
+					font-family: "Proxima Bold"
+					cursor: not-allowed
+				.active-link:after
+					content: ""
+					border-bottom: 2px solid black
+					border-right: 2px solid black
+					width: 8px
+					height: 8px
+					position: absolute
+					transform: rotateZ(-45deg)
+					top: 7px
+					right: 20px
+		.space-desc-body
+			font-size: 16px
+			ul
+				padding-left: 10px
+				li
+					margin-top: 10px
+					font-size: 16px
+					@include media(mobile)
+						margin-top: 10px
+	.map-container
+		height: 220px
+		background-color: green
 	.row
 		@include media(mobile)
 			margin: 0
@@ -91,6 +155,7 @@
 			@include media(mobile)
 				padding: 0
 .cr-spaces-slider
+	display: none
 	position: fixed
 	width: 100%
 	height: 100vh
@@ -98,6 +163,8 @@
 	left: 0
 	right: 0
 	margin-bottom: 0 !important
+	&.visible-slider
+		display: block
 	.slick-list
 		padding-bottom: 0
 	.cr-spaces-slider-img
@@ -105,12 +172,16 @@
 		background-size: cover !important
 		background-repeat: no-repeat !important
 	.slick-prev
-		top: 734px
-		right: 490px
+		right: 610px
 		z-index: 1
 		width: 40px
 		height: 40px
 		border: 1px solid #fff
+		@include media(wide)
+			top: $top-arrows-wide
+		@include media(xwide)
+			top: initial
+			bottom: $bottom-container-xwide
 		@include media(to_tablet)
 			top: 693px
 			right: 455px
@@ -126,12 +197,16 @@
 		&:hover
 			background-color: $dark
 	.slick-next
-		top: 734px
-		right: 440px
+		right: 560px
 		z-index: 1
 		width: 40px
 		height: 40px
 		border: 1px solid #fff
+		@include media(wide)
+			top: $top-arrows-wide
+		@include media(xwide)
+			top: initial
+			bottom: $bottom-container-xwide
 		@include media(to_tablet)
 			top: 693px
 			right: 395px
@@ -147,15 +222,9 @@
 		&:hover
 			background-color: $dark
 	.slick-dots
-		top: 735px
-		right: -375px
-		z-index: 1
 		@include media(to_tablet)
-			top: 690px
-			right: -340px
 		@include media(mobile)
-			top: 410px
-			right: -140px
+			top: 400px
 		li
 			button
 				&:before
