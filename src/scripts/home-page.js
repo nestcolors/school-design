@@ -36,12 +36,13 @@ const homePage = () => {
 
   var close_mobile_menu = header.find(".cr-close-btn");
   close_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').addClass('mod-mobile-menu-closed');
+    header.find('.cr-header__fixed-part').fadeOut().addClass('mod-mobile-menu-closed');
   });
   var open_mobile_menu = header.find(".cr-burger-btn");
   open_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
+    header.find('.cr-header__fixed-part').fadeIn().removeClass('mod-mobile-menu-closed');
   });
+
 }
 export default homePage;
 
