@@ -8,56 +8,447 @@
   <meta name="description" content="Free Web tutorials courses-list">
   <meta name="keywords" content="HTML,CSS,XML,JavaScript courses-list">
   <meta name="author" content="John Doe courses-list">
-  <link rel="stylesheet" href="src/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="src/styles/vendors/bootstrap.min.css">
 </head>
 <body id="courses-list">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-6"></div>
-      <div class="col-xs-6">hello</div>
-    </div>
-  </div>
+  <div class="modal-view">
+    <div class="cr-section mod-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <a href="" class="cr-header__logo">
+              <img src="src/images/assets/logo-creative-w.svg" alt="logo" class="">
+            </a>
+            <div class="cr-section__header">
+              <div class="cr-section__header-top">всі курси та напрямки —   </div>
+              All courses
+            </div>
+            <a href="#" onclick="history.go(-1)">
+              <div class="close-icon"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+
   <div id="barba-wrapper">
-    <div class="barba-container" data-namespace="courses-list">
-      <div id="contact-container" class="contact-page">
-        <nav>
-          <a href="index.html"><div class="close-page"></div></a>
-        </nav>
-        <h1>this is courses list page</h1>
-        <p class="btn">Please course that you like!</p>
-        <hr>
+    <div class="barba-container container" data-namespace="courses-list">
+      <div id="contact-container" class="contact-page row">
         <div class="cta filter">
           <a class="all active" data-filter="all" href="#" role="button">Показати всі</a>
-          <a class="green" data-filter="green" href="#" role="button">Дизайн інтер’єрів</a>
-          <a class="red" data-filter="red" href="#" role="button">Графічний дизайн</a>
-          <a class="blue" data-filter="blue" href="#" role="button">Рисунок</a>
+          <a class="green" data-filter="green" href="#" role="button">Середовище</a>
+          <a class="red" data-filter="red" href="#" role="button">Графіка</a>
+          <a class="blue" data-filter="blue" href="#" role="button">Костюм</a>
         </div>
 
         <div class="boxes">
           <div class="color-container" data-category="green-container" >
-            <h3 id="design">Дизайн інтер’єрів</h3><br>
-            <a class="green box" data-category="green" href="#">Box2</a>
-            <a class="green box" data-category="green" href="#">Box4</a>
-            <a class="green box" data-category="green" href="#">Box6</a>
-            <a class="green box" data-category="green" href="#">Box9</a>
-            <a class="green box" data-category="green" href="#">Box14</a>
-            <a class="green box" data-category="green" href="#">Box12</a>
+            <h3 id="design" class="t-bold col-sm-12">СЕРЕДОВИЩЕ —</h3>
+            <a class="green box col-md-3 col-sm-6 col-xs-12" data-category="green" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="green box col-md-3 col-sm-6 col-xs-12" data-category="green" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="green box col-md-3 col-sm-6 col-xs-12" data-category="green" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="green box col-md-3 col-sm-6 col-xs-12" data-category="green" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="green box col-md-3 col-sm-6 col-xs-12" data-category="green" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="green box col-md-3 col-sm-6 col-xs-12" data-category="green" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
           </div>
           <div class="color-container" data-category="red-container" >
-            <h3 id="graph-design">Графічний дизайн</h3><br>
-            <a class="red box" data-category="red" href="#">Box5</a>
-            <a class="red box" data-category="red" href="#">Box8</a>
-            <a class="red box" data-category="red" href="#">Box15</a>
-            <a class="red box" data-category="red" href="#">Box11</a>
-            <a class="red box" data-category="red" href="#">Box1</a>
+            <h3 id="graph-design" class="t-bold col-sm-12">ГРАФІКА —</h3>
+            <a class="red box col-md-3 col-sm-6 col-xs-12" data-category="red" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="red box col-md-3 col-sm-6 col-xs-12" data-category="red" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="red box col-md-3 col-sm-6 col-xs-12" data-category="red" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="red box col-md-3 col-sm-6 col-xs-12" data-category="red" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="red box col-md-3 col-sm-6 col-xs-12" data-category="red" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
           </div>
           <div class="color-container" data-category="blue-container" >
-            <h3 id="sketching">Рисунок</h3><br>
-            <a class="blue box" data-category="blue" href="#">Box3</a>
-            <a class="blue box" data-category="blue" href="#">Box7</a>
-            <a class="blue box" data-category="blue" href="#">Box10</a>
-            <a class="blue box" data-category="blue" href="#">Box13</a>
-            <a class="blue box" data-category="blue" href="#">Box16</a>
+            <h3 id="sketching" class="t-bold col-sm-12">КОСТЮМ —</h3>
+            <a class="blue box col-md-3 col-sm-6 col-xs-12" data-category="blue" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="blue box col-md-3 col-sm-6 col-xs-12" data-category="blue" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="blue box col-md-3 col-sm-6 col-xs-12" data-category="blue" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="blue box col-md-3 col-sm-6 col-xs-12" data-category="blue" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
+            <a class="blue box col-md-3 col-sm-6 col-xs-12" data-category="blue" href="#">
+              <div class="cr-courses__item mode-gray">
+                <select name="" id="" class="cr-courses__chose-level">
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                  <option value="">інтенсив+профі</option>
+                </select>
+                <p class="cr-courses__title">
+                  <span class="mode-yellow">Design.</span> маркетинг
+                  послуг очима
+                  клієнта
+                </p>
+                <p class="course-start">
+                  Початок: <strong>вересень</strong>
+                </p>
+                <p class="course-price">
+                  Вартість: <strong>13 000 грн,</strong>
+                </p>
+                <p class="discount">
+                  (при повній оплаті до 20.08 - 5% )
+                </p>
+                <button class="cr-button mod-white center-block">зареєструватися</button>
+              </div>
+            </a>
           </div>
         </div>
       </div>
