@@ -52,7 +52,7 @@ $bottom-container-xwide: 150px
 		li
 			a
 				@include media(mobile)
-					margin-left: 20px
+					margin-left: 0px
 	.arrow-right
 		margin-left: 7px
 	a
@@ -106,15 +106,20 @@ $bottom-container-xwide: 150px
 	@include media(xwide)
 		margin-top: 0
 		bottom: $bottom-container-xwide
+	@include media (to_tablet)
+	    width: 450px
+	    background-color: #fbf7f6
+	    position: absolute
+	    right: 50px
+	    top: 25%
 	@include media(to_mobile)
-		margin: 350px 0 0
+		margin: 300px 0 0
 		position: relative
-		margin: 450px 0 0
 		right: 0px
 		width: 90%
 		margin-left: 5%
 	@include media(mobile)
-		margin-top: 450px
+		margin-top: 300px
 	.space-desc-wrapper
 		margin-left: 10px
 		.space-selector
@@ -191,8 +196,8 @@ $bottom-container-xwide: 150px
 			top: initial
 			bottom: $bottom-container-xwide
 		@include media(to_tablet)
-			top: 693px
-			right: 455px
+			top: 710px
+			right: 600px
 		&:before
 			border-top: 1px solid #fff
 			left: 8px
@@ -218,8 +223,8 @@ $bottom-container-xwide: 150px
 			top: initial
 			bottom: $bottom-container-xwide
 		@include media(to_tablet)
-			top: 693px
-			right: 395px
+			top: 710px
+			right: 530px
 		&:before
 			border-top: 1px solid #fff
 			top: 18px
@@ -233,6 +238,9 @@ $bottom-container-xwide: 150px
 			background-color: $dark
 	.slick-dots
 		@include media(to_tablet)
+			bottom: 200px
+			right: 55px
+			text-align: right
 		@include media(mobile)
 			top: 400px
 		li
