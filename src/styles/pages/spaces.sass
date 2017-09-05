@@ -121,6 +121,7 @@ $bottom-container-xwide: 150px
 			padding-top: 20px
 			h3
 				position: relative
+				display: inline-block
 				.active-link
 					font-family: "Proxima Bold"
 					cursor: not-allowed
@@ -133,11 +134,14 @@ $bottom-container-xwide: 150px
 					position: absolute
 					transform: rotateZ(-45deg)
 					top: 7px
-					right: 20px
+					right: -14px
 		.space-desc-body
 			font-size: 16px
 			ul
 				padding-left: 10px
+				display: none
+				&.active-text
+					display: block
 				li
 					margin-top: 10px
 					font-size: 16px
@@ -146,6 +150,10 @@ $bottom-container-xwide: 150px
 	.map-container
 		height: 220px
 		background-color: green
+		.map-item
+			display: none
+			&.active-map
+				display: block
 	.row
 		@include media(mobile)
 			margin: 0
@@ -189,11 +197,13 @@ $bottom-container-xwide: 150px
 			border-top: 1px solid #fff
 			left: 8px
 			top: 18px
+			opacity: 1
 		&:after
 			border-top: 1px solid #fff
 			border-right: 1px solid #fff
 			left: 8px
 			top: 14px
+			opacity: 1
 		&:hover
 			background-color: $dark
 	.slick-next

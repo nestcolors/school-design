@@ -16,6 +16,12 @@ const spaces = () => {
     currentSlider.removeClass('visible-slider');
     $(`#${nextSpace}`).addClass('visible-slider');
 
+    $('.active-text').removeClass('active-text');
+    $(`#${nextSpace}-text`).addClass('active-text');
+
+    $('.active-map').removeClass('active-map');
+    $(`#${nextSpace}-map`).addClass('active-map');
+
     initSlick(nextSpace);
     $(currentSlider[0]).slick('unslick');
   })
@@ -27,12 +33,13 @@ const spaces = () => {
   const initSlick = (val) => {
     $(`#${val}`).slick({
       arrows: true,
+      infinite: false,
+      dots: true,
       responsive: [
         {
           breakpoint: 768,
           settings: {
             arrows: false,
-            dots: true
           }
         }
       ]
