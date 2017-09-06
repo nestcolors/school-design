@@ -19,7 +19,7 @@ const aboutCoursePage = () => {
         }
       ]
     });
-    $('.cr-people-slider').slick({
+    $('.cr-people-slider.about-course-people').slick({
       slidesToShow: 3,
       slidesToScroll: 1,
       arrows: true,
