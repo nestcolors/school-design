@@ -74,6 +74,66 @@
 			color: $white
 			border: 1px solid $dark
 			background-color: $dark
+	.box
+		margin-bottom: 
+		@include media(to_tablet)
+			margin-bottom: 40px
+		@include media(mobile)
+			margin-bottom: 10px
+	.mode-border-bottom
+		border-bottom: 5px solid $mint
+	.mode-sale
+		&:before
+			content: "SALE"
+			position: absolute
+			top: -42px
+			font-size: 18px
+			background-color: $mint
+			color: $white
+			font-family: $semibold
+			padding: 8px 19px
+			left: 0
+			letter-spacing: 1.6px
+			@include media(mobile)
+				top: 0
+				padding: 5px 10px
+	.mode-new
+		&:before
+			content: "NEW"
+			position: absolute
+			top: -42px
+			font-size: 18px
+			background-color: $mint
+			color: $white
+			font-family: $semibold
+			padding: 8px 19px
+			left: 0
+			letter-spacing: 1.6px
+			@include media(mobile)
+				top: 0
+				padding: 5px 10px
+	.mode-best-prise
+		&:before
+			content: "BEST PRISE"
+			position: absolute
+			top: -42px
+			font-size: 18px
+			background-color: $mint
+			color: $white
+			font-family: $semibold
+			padding: 8px 19px
+			left: 0
+			letter-spacing: 1.6px
+			@include media(mobile)
+				top: 0
+				padding: 5px 10px
+	.cr-courses__chose-level
+		@include media(mobile)
+			position: absolute
+			right: 0
+			top: 0
+			padding: 5px 10px
+
 	.t-bold
 		margin: 60px 0 40px
 		text-align: left
