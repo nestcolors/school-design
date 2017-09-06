@@ -86,6 +86,8 @@
   @include media(to_tablet)
     top: 16px
     transform: translate(-50%)
+  @include media(mobile)
+    top: 15px !important
 
 body
   position: relative
@@ -110,6 +112,8 @@ body
   position: relative
   .cr-header__logo
     width: 89px
+    @include media(mobile)
+      top: 0
     img
       height: 20px
       max-width: 100%
