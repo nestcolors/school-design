@@ -2,6 +2,7 @@
   position: relative
 .cr-hero
   margin-top: 110px
+  z-index: 1
   @include media(wide)
     max-height: 600px
   @include media(xwide)
@@ -20,6 +21,7 @@
     bottom: 26px
     left: 50%
     transform: translate(-50%)
+    z-index: 999
 .cr-hero-video
   width: 100%
   @include media(mobile)
@@ -75,3 +77,4 @@
 .pull-right
   @include media(mobile)
     float: none !important
+    
