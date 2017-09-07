@@ -72,6 +72,7 @@
   &.mod-fixed
     position: fixed
     top: 0
+    z-index: 999
   &.mod-mobile-menu-closed
     @include media(to_tablet)
       display: none
@@ -86,6 +87,8 @@
   @include media(to_tablet)
     top: 16px
     transform: translate(-50%)
+  @include media(mobile)
+    top: 15px !important
 
 body
   position: relative
@@ -110,10 +113,12 @@ body
   position: relative
   .cr-header__logo
     width: 89px
+    @include media(mobile)
+      top: 0
     img
       height: 20px
       max-width: 100%
-      margin-top: -7px
+      margin-top: 0px
 .cr-burger-btn
   position: absolute
   width: 40px
