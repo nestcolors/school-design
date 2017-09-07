@@ -49,11 +49,12 @@ export default homePage;
 
 
 $(document).ready(function(){
-  $('.cr-main-page-slider1').slick({
-    arrows: true,
-    dots: true,
-    centerMode: true,
-    centerPadding: '0px',
+  $('.cr-hero-slider').slick({
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     fade: true,
+    autoplay: false
   });
 });
