@@ -48,7 +48,7 @@ const homePage = () => {
 export default homePage;
 
 $(document).ready(function(){
-  $('.slider').slick({
+  $('.cr-hero-slider').slick({
     dots: false,
     arrows: false,
     autoplay: true,
