@@ -47,14 +47,11 @@ const homePage = () => {
 
 export default homePage;
 
-
 $(document).ready(function(){
-  $('.cr-hero-slider').slick({
-    arrows: false,
+  $('.slider').slick({
     dots: false,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    fade: true,
-    autoplay: false
-  });
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000
+  })
 });
