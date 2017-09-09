@@ -81,5 +81,9 @@ const aboutUsPage = () => {
     })
   });
 
+  $('.cr-type-select').on('click', function(){
+    $('.show-on-click').slideToggle();
+  })
+
 }
 export default aboutUsPage;
