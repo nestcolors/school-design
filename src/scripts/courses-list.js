@@ -34,6 +34,10 @@ const coursesList = () => {
         });
     }
   });
+  $('.cr-type-select').on('click', function(){
+    // $('.show-on-click').slideToggle();
+    $('.show-on-click').toggleClass('show-level-list');
+  })
 
 }
 

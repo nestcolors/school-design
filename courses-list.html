@@ -14,16 +14,30 @@
   <div class="modal-view">
     <div class="cr-section mod-black">
       <div class="container">
-        <div class="row">
+        <div class="row cr-modal-header-row">
           <div class="col-xs-12">
             <a href="" class="cr-header__logo">
               <img src="src/images/assets/logo-creative-w.svg" alt="logo" class="">
             </a>
-            <div class="cr-section__header">
-              <div class="cr-section__header-top">всі курси та напрямки —  </div>
-              All courses
+            <div class="row cr-modal-header">
+              <div class="col-xs-12 col-sm-8">
+                <div class="cr-section__header">
+                  <div class="cr-section__header-top">всі курси та напрямки —  </div>
+                  All courses
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-4">
+                <div class="cr-type-select">
+                  Дизайн
+                  <ul class="cr-type-select-value show-on-click">
+                    <li><a href="#">Бізнес</a></li>
+                    <li><a href="#">Креатив</a></li>
+                    <li><a href="#">Junior</a></li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <a href="./event-list.html">
+            <a href="./home-page.html">
               <div class="close-icon"></div>
             </a>
           </div>
@@ -32,7 +46,7 @@
 
       <div id="barba-wrapper">
         <div class="barba-container container" data-namespace="courses-list">
-          <div id="contact-container" class="contact-page row">
+          <div id="courses-list-container" class="courses-list-page row">
             <div class="cta filter">
               <a class="all active" data-filter="all" href="#" role="button">Показати всі</a>
               <a class="green" data-filter="green" href="#" role="button">Середовище</a>
@@ -42,8 +56,8 @@
             </div>
 
             <div class="boxes">
-              <div class="color-container" data-category="green-container">
-                <h3 id="design" class="t-bold">СЕРЕДОВИЩЕ —</h3>
+              <div class="color-container row" data-category="green-container">
+                <h3 id="design">СЕРЕДОВИЩЕ —</h3>
                 <a class="green box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="green" href="#">
                   <div class="cr-courses__item mode-gray mode-border-bottom">
                     <select name="" id="" class="cr-courses__chose-level">
@@ -195,8 +209,8 @@
                   </div>
                 </a>
               </div>
-              <div class="color-container" data-category="red-container">
-                <h3 id="graph-design" class="t-bold col-xs-12">ГРАФІКА —</h3>
+              <div class="color-container row" data-category="red-container">
+                <h3 id="graph-design">ГРАФІКА —</h3>
                 <a class="red box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="red" href="#">
                   <div class="cr-courses__item mode-gray mode-border-bottom">
                     <select name="" id="" class="cr-courses__chose-level">
@@ -323,8 +337,8 @@
                   </div>
                 </a>
               </div>
-              <div class="color-container" data-category="blue-container">
-                <h3 id="sketching" class="t-bold col-xs-12">КОСТЮМ —</h3>
+              <div class="color-container row" data-category="blue-container">
+                <h3 id="sketching" class="t-bold">КОСТЮМ —</h3>
                 <a class="blue box col-lg-3 col-md-4 col-sm-6 col-xs-12" data-category="blue" href="#">
                   <div class="cr-courses__item mode-gray">
                     <select name="" id="" class="cr-courses__chose-level">
