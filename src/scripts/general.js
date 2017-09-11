@@ -17,6 +17,30 @@ const general = () => {
     }
   });
 
+  /*
+  on hover show submenu
+  */
+  $('.cr-sublist-container').hover((i) => {
+    $('.cr-sublist-container > ul').fadeIn(0);
+    $('.cr-sublist-container > ul').addClass('show-cr-list-sub-menu');
+  }, (i) => {
+    $('.cr-sublist-container > ul').fadeOut();
+  });
+
+  /*
+  on hover show list
+  */
+  $('.cr-type-select').hover((i) => {
+    $('.show-on-click').fadeIn(0);
+    $('.show-on-click').addClass('show-level-list');
+  }, (i) => {
+    $('.show-on-click').fadeOut();
+  });
+  // $('.cr-type-select').on('click', function(){
+  //   // $('.show-on-click').slideToggle();
+  //   $('.show-on-click').toggleClass('show-level-list');
+  // })
+
   // mobile menu
   var close_mobile_menu = header.find(".cr-close-btn");
   close_mobile_menu.click(function(event) {

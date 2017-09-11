@@ -1,3 +1,7 @@
+@keyframes appear-list
+from {transform: translateY(20px); opacity: 0;}
+to {transform: translateY(0px); opacity: 1;}
+
 .cr-header
   position: fixed
   top: 0
@@ -42,6 +46,44 @@
   @include media(to_tablet)
     display: none
 
+.cr-header__fixed-part
+  .cr-horizontal-list
+    position: relative
+    li.cr-horizontal-list__item
+      position: relative
+    li.cr-horizontal-list__item.cr-sublist-container
+      .cr-header__link
+        &.mod-active:after
+          border-color: $mint
+        &:after
+          position: absolute
+          width: 6px
+          height: 6px
+          border-right: 1px solid black
+          border-bottom: 1px solid black
+          content: ''
+          right: -10px
+          top: 6px
+          transform: rotateZ(45deg)
+    .cr-horizontal-list-sub-menu
+      display: none
+      position: absolute
+      list-style-type: none
+      background-color: white
+      padding: 10px 70px 30px 30px
+      top: 36px
+      border-top: 4px solid black
+      width: 200px
+      .cr-sub-menu-item
+        margin-top: 30px
+        a
+          color: $black
+          &:hover
+            color: $mint
+    .show-cr-list-sub-menu
+      display: block
+      animation: appear-list
+      animation-duration: 0.15s
 .cr-header__fixed-part
   background-color: #FFF
   border-bottom: 4px solid $dark
