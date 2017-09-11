@@ -44,8 +44,8 @@ const homePage = () => {
   });
 
   $('.cr-hero-slider').slick({
-    // dots: true,
-    // arrows: true,
+    dots: false,
+    arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
