@@ -1,6 +1,10 @@
 @keyframes bg-size
     from {transform: scale(1)}
     to {transform: scale(1.05, 1.05)}
+@keyframes appear-list
+    from {transform: translateY(20px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+    // to {background-color: yellow;}
 .slick-list
   padding-bottom: 20px
   @include media(mobile)
@@ -12,68 +16,11 @@
   @include media(to_tablet)
     padding: 30px 60px
   .cr-section__header
-    margin-bottom: 85px
+    margin-bottom: 50px
     @include media(mobile)
       margin-bottom: 30px
-  .cr-type-select
-    margin-top: 18px
-    float: right
-    position: relative
-    padding-top: 10px
-    &:before
-      content: ''
-      position: absolute
-      right: 15px
-      top: 15.5px
-      width: 8px
-      height: 8px
-      border-top: 1px solid $dark
-      border-right: 1px solid $dark
-      transform: rotate(134deg)
-      transition: 0.2s
-      z-index: 1
-    &:after
-      content: ''
-      position: absolute
-      width: 42px
-      height: 100%
-      border-left: 2px solid #000
-      top: 0
-      bottom: 0
-      right: 0
-      background: #fff450
-      z-index: 0
-  .cr-type-select-value
-    float: right
-    position: absolute
-    left: -42px
-    @include media(mobile)
-      width: 100%
-      z-index: 2
-      right: 0
-      left: 0
-      padding-left: 0
-    li
-      list-style-type: none
-      min-width: 230px
-      border: 2px solid #131313
-      background-color: rgba(52, 73, 94, 0.1)
-      padding: 8px 0 8px 45px
-      &:hover
-        cursor: pointer
-        background: $white
-      @include media(mobile)
-        background-color: #e1e3e4
-      a
-        color: $black
-  .show-on-click
-    display: none
-  .cr-flex-table
-    margin-top: 0
-  @include media(mobile)
-    padding: 23px 15px 0px 15px
   .google-registration
-    opacity: 0.5;
+    opacity: 0.5
     font-family: $light
     font-size: 14px
     font-weight: 300
