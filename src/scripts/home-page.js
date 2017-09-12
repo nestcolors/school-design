@@ -43,15 +43,19 @@ const homePage = () => {
     header.find('.cr-header__fixed-part').fadeIn().removeClass('mod-mobile-menu-closed');
   });
 
+  
+
+}
+
+export default homePage;
+
+$(document).ready(function(){
   $('.cr-hero-slider').slick({
     dots: false,
     arrows: false,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000
   });
-
-}
-
-export default homePage;
+});

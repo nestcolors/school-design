@@ -50,7 +50,7 @@ const spaces = () => {
 
 export default spaces;
 
-
+/*Album slick slayder*/
 $(document).ready(function(){
   $('.cr-album-slider').slick({
     slidesToShow: 1,
