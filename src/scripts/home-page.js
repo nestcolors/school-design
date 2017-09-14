@@ -34,20 +34,22 @@ const homePage = () => {
       }
   });
 
-  var close_mobile_menu = header.find(".cr-close-btn");
-  close_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').fadeOut().addClass('mod-mobile-menu-closed');
-  });
-  var open_mobile_menu = header.find(".cr-burger-btn");
-  open_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').fadeIn().removeClass('mod-mobile-menu-closed');
-  });
+  // var close_mobile_menu = header.find(".cr-close-btn");
+  // close_mobile_menu.click(function(event) {
+  //   header.find('.cr-header__fixed-part').fadeOut().addClass('mod-mobile-menu-closed');
+  // });
+  // var open_mobile_menu = header.find(".cr-burger-btn");
+  // open_mobile_menu.click(function(event) {
+  //   header.find('.cr-header__fixed-part').fadeIn().removeClass('mod-mobile-menu-closed');
+  // });
+
 
   
 
 }
 
 export default homePage;
+
 
 $(document).ready(function(){
   $('.cr-hero-slider').slick({
@@ -58,4 +60,6 @@ $(document).ready(function(){
     autoplay: false,
     autoplaySpeed: 3000
   });
+
+
 });
