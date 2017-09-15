@@ -46,20 +46,20 @@
       </div>
       <a class="cr-burger-btn hidden-md hidden-lg"></a>
     </div>
-    <div class="cr-hero">
+    <div class="cr-hero cr-home-hero">
       <div class="cr-hero-slider">
-        <div>
-          <video class="cr-hero-video" poster="src/images/hero-poster.png" playsinline autoplay muted loop>
+        <div class="cr-hero-slide">
+          <video id="myVideo" class="cr-hero-video" poster="src/images/hero-poster.png" autoplay nocontrols loop muted>
             <source src="src/videos/hero.mp4" type="video/mp4">
           </video>
         </div>
-        <div>
-          <video class="cr-hero-video" poster="src/images/hero-poster.png" playsinline autoplay muted loop>
+        <div class="cr-hero-slide">
+          <video id="myVideo"  class="cr-hero-video" poster="src/images/hero-poster.png" playsinline autoplay muted loop>
             <source src="src/videos/hero.mp4" type="video/mp4">
           </video>
         </div>
-        <div>
-          <video class="cr-hero-video" poster="src/images/hero-poster.png" playsinline autoplay muted loop>
+        <div class="cr-hero-slide">
+          <video id="myVideo"  class="cr-hero-video" poster="src/images/hero-poster.png" playsinline autoplay muted loop>
             <source src="src/videos/hero.mp4" type="video/mp4">
           </video>
         </div>
@@ -423,9 +423,9 @@
           <a href="./courses-list.html" class="cr-button pull-right">всі курси</a>
         </div>
       </div>
-      <button class="cr-button--vertical mod-white hidden-xs">
-        <span class="cr-button__label tc-mint">події</span>
-      </button>
+      <!-- <button class="cr-button--vertical mod-white hidden-xs">
+      </button> -->
+      <a href="" style="color: black;" class="cr-button__label tc-mint"><img src="./src/images/icons/mouse.svg" alt="">події</a>
     </div>
     <div class="cr-section less-margin">
       <div class="container">
@@ -439,7 +439,7 @@
         </div>
       </div>
 
-      <div class="container cr-events-container">
+      <div class="container cr-events-container cursor-pointer">
         <div class="row">
           <div class="col-md-4 col-sm-6 hidden-xs">
           </div>

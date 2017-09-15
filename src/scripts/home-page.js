@@ -44,7 +44,7 @@ const homePage = () => {
   // });
 
 
-  
+
 
 }
 
@@ -53,12 +53,16 @@ export default homePage;
 
 $(document).ready(function(){
   $('.cr-hero-slider').slick({
-    dots: false,
-    arrows: false,
+    dots: true,
+    arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    autoplaySpeed: 3000
+  });
+
+  $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
+  $('.cr-hero-slider').on('afterChange', function(event, slick, currentSlide){
+    $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
   });
 
 
