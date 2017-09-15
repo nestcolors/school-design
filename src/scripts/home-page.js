@@ -44,12 +44,17 @@ const homePage = () => {
   });
 
   $('.cr-hero-slider').slick({
-    dots: false,
-    arrows: false,
+    dots: true,
+    arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000
+    autoplay: false,
+    // autoplaySpeed: 3000
+  });
+
+  $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
+  $('.cr-hero-slider').on('afterChange', function(event, slick, currentSlide){
+    $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
   });
 
 }

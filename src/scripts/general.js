@@ -50,6 +50,19 @@ const general = () => {
   open_mobile_menu.click(function(event) {
     header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
   });
+
+  // detect scrolling direction
+  var lastScrollTop = 0;
+  $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScrollTop){
+         // downscroll code
+     } else {
+        // upscroll code
+     }
+     lastScrollTop = st;
+  });
+
 }
 
 export default general;
