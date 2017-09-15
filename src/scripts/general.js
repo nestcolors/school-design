@@ -53,11 +53,11 @@ const general = () => {
 
 
   $('.cr-burger-btn').on('click', function(){
-    $('.cr-header__fixed-part').fadeIn(1000);
+    $('.cr-header__fixed-part').toggle('slow');
   });
-  $('.cr-close-btn').on('click', function(){
-    $('.cr-header__fixed-part').toggle(1000);
-  });
+  // $('.cr-close-btn').on('click', function(){
+  //   $('.cr-header__fixed-part').toggle(1000);
+  // });
 }
 
 export default general;

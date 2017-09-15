@@ -93,7 +93,7 @@ to {transform: translateY(0px); opacity: 1;}
   @include media(to_tablet)
     z-index: 1
     position: fixed
-    top: 0
+    top: 44px
     width: 100%
     min-height: 100%
     background-color: rgba(8, 8, 8, 0.8)
@@ -106,7 +106,7 @@ to {transform: translateY(0px); opacity: 1;}
         border: none
     .cr-horizontal-list
       float: none !important
-      margin-top: 80px
+      margin-top: 40px
     .cr-horizontal-list__item
       & + .cr-horizontal-list__item
         display: block
@@ -124,6 +124,7 @@ to {transform: translateY(0px); opacity: 1;}
   left: 50%
   top: 50%
   transform: translate(-50%, -50%)
+  display: none
   img
     height: 20px
   @include media(to_tablet)
@@ -138,6 +139,7 @@ body
     padding-top: 65px
 
 .cr-close-btn
+  display: none
   @include media(to_tablet)
     cursor: pointer
     padding: 10px
