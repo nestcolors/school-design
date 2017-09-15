@@ -63,6 +63,11 @@ const general = () => {
      lastScrollTop = st;
   });
 
+  $('document').ready(() => {
+    $('.cr-header, .cr-header__fixed-part').css(
+      'width', window.innerWidth
+    )
+  })
 }
 
 export default general;
