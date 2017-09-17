@@ -62,6 +62,9 @@
   margin-left: 0
   margin-right: 0
   padding: 20px 0
+  @include media(mobile)
+    margin-bottom: 20px
+    border-bottom: 1px solid #e6e6e6
 .about-course-title
   font-size: 18px
   text-transform: uppercase
@@ -73,7 +76,7 @@
     margin-top: -2px
     @include media(mobile)
       margin-top: -10px !important
-      margin-bottom: 50px
+      margin-bottom: 20px
 .cr-events-container a
   color: $black
 .courses-link
@@ -88,7 +91,7 @@
 .courses-link .row div
   &:last-child
     @include media(mobile)
-      margin-top: 20px
+      margin-top: 10px
 .courses-link div
   &:first-child
     @include media(mobile)

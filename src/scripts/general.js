@@ -63,11 +63,12 @@ const general = () => {
      lastScrollTop = st;
   });
 
-  $('document').ready(() => {
-    $('.cr-header, .cr-header__fixed-part').css(
-      'width', window.innerWidth
-    )
-  })
+  // $('document').ready(() => {
+  //   $('.cr-header, .cr-header__fixed-part').css(
+  //     'width', window.innerWidth
+  //   )
+  //   console.log('window.innerWidth', window.innerWidth);
+  // })
 }
 
 export default general;
