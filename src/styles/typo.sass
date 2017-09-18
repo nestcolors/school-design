@@ -28,12 +28,17 @@ strong
   color: $white
   letter-spacing: 1px
   padding: 0px 6px
+  @include media(mobile)
+    padding: 1px 6px 0
 
 .t-a-center
   text-align: center
 
 .t-a-left
   text-align: left
+
+.t-a-right
+  text-align: right
 
 .t-bold
   font-family: $bold
@@ -56,3 +61,5 @@ strong
   p
     font-size: 16px
     font-family: $regular
+.p-16px
+  font-size: 16px

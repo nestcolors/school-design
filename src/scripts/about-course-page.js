@@ -9,6 +9,7 @@ const aboutCoursePage = () => {
     $('.cr-our-works').slick({
       arrows: true,
       dots: false,
+      fade: true,
       responsive: [
         {
           breakpoint: 992,
@@ -65,7 +66,6 @@ const aboutCoursePage = () => {
 
     });
     $('.cr-courses-slider').slick({
-      slidesToShow: 2,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
