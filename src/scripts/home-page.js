@@ -49,7 +49,7 @@ const homePage = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: false,
-    // autoplaySpeed: 3000
+    fade: true,
   });
 
   $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
