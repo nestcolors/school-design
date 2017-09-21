@@ -57,18 +57,6 @@ const general = () => {
     header.toggleClass('mod-mobile-opened');
   });
 
-  // detect scrolling direction
-  var lastScrollTop = 0;
-  $(window).scroll(function(event){
-     var st = $(this).scrollTop();
-     if (st > lastScrollTop){
-         // downscroll code
-     } else {
-        // upscroll code
-     }
-     lastScrollTop = st;
-  });
-
   // $('document').ready(() => {
   //   $('.cr-header, .cr-header__fixed-part').css(
   //     'width', window.innerWidth

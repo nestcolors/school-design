@@ -93,18 +93,30 @@
       margin: 10px 0
 .cr-course-block__footer
   margin-top: 35px
-  &.fixed-to-screen
-    display: none
-    position: fixed
-    width: 100%
-    background-color: white
-    bottom: 0
-    z-index: 999
-    left: 0
-    margin: 0
-    padding: 10px 50px
-    .back-to
+.fixed-to-screen
+  .cr-course-block__footer
+    margin-top: 0
+  display: none
+  position: fixed
+  width: 100%
+  background-color: white
+  bottom: 0
+  z-index: 999
+  left: 0
+  margin: 0
+  padding: 10px 50px
+  .back-to
+    margin-top: 10px
+  @include media(mobile)
+    padding: 10px 0
+    .cr-course-block__footer
       margin-top: 10px
+    .cr-button
+      padding-right: 20px
+      &::after, &::before
+        display: none
+    .back-to
+      margin-top: 0px
 .cr-two-columns
   font-size: 18px
   line-height: 1.28

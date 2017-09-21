@@ -111,21 +111,20 @@ const aboutCoursePage = () => {
 
   });
 
-  window.onscroll = function() {showBar()};
-
-  var scrollPosition = document.body.scrollTop + window.innerHeight;
-  var pageHeight = document.body.clientHeight;
-  var some = (document.body.scrollTop + window.innerHeight) - document.body.clientHeight;
+  // detect scrolling direction
+  var lastScrollTop = 0;
   var currentHeight = function() {
     return ((document.body.scrollTop + window.innerHeight) - document.body.clientHeight)
   }
-  function showBar() {
-      if (document.body.scrollTop > 700 && currentHeight() < -300) {
-          $('.fixed-to-screen').fadeIn(100);
-      } else {
-          $('.fixed-to-screen').fadeOut(100);
-      }
-  }
+  $(window).scroll(function(event){
+     var st = $(this).scrollTop();
+     if (st > lastScrollTop){
+         $('.fixed-to-screen').fadeOut(100);
+     } else {
+       $('.fixed-to-screen').fadeIn(100);
+     }
+     lastScrollTop = st;
+  });
 
 }
 export default aboutCoursePage;
