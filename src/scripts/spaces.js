@@ -45,7 +45,6 @@ const spaces = () => {
       ]
     });
   }
-
 }
 
 export default spaces;
@@ -70,3 +69,4 @@ $(document).ready(function(){
       ]
   });
 });
+

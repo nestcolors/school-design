@@ -42,13 +42,19 @@ const general = () => {
   // })
 
   // mobile menu
-  var close_mobile_menu = header.find(".cr-close-btn");
-  close_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').addClass('mod-mobile-menu-closed');
-  });
-  var open_mobile_menu = header.find(".cr-burger-btn");
-  open_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
+  // var close_mobile_menu = header.find(".cr-close-btn");
+  // close_mobile_menu.click(function(event) {
+  //   header.find('.cr-header__fixed-part').addClass('mod-mobile-menu-closed');
+  // });
+  // var open_mobile_menu = header.find(".cr-burger-btn");
+  // open_mobile_menu.click(function(event) {
+  //   header.find('.cr-header__fixed-part').removeClass('mod-mobile-menu-closed');
+  // });
+
+  var mobile_burger_btn =  header.find(".cr-burger-btn");
+  mobile_burger_btn.click(function(event) {
+    // header.find('.cr-header__fixed-part').toggleClass('mod-mobile-menu-closed');
+    header.toggleClass('mod-mobile-opened');
   });
 
   // $('document').ready(() => {

@@ -79,16 +79,70 @@
           </div>
         </div>
         <div class="clear"></div>
-        <div class="map-container">
-          <div id="pogulanka-map" class="map-item active-map">pogulanka here</div>
+        <div class="map-container js-cr-map">
+<!--           <div id="pogulanka-map" class="map-item active-map">pogulanka here</div>
           <div id="vakhnianyna-map" class="map-item">vakhnianyna here</div>
-          <div id="dudaeva-map" class="map-item">dudaeva here</div>
+          <div id="dudaeva-map" class="map-item">dudaeva here</div> -->
         </div>
       </div>
 
     </div>
   </div>
+  <script>
+    var pogulanka = document.getElementsByClassName('pogulanka')[0];
+    var vakhnianyna = document.getElementsByClassName('vakhnianyna')[0];
+    var dudaeva = document.getElementsByClassName('dudaeva')[0];
+    var map;
+    var markers = [];
+    pogulanka.addEventListener("click", function(){
+      showMarker('pogulanka');
+    });
+    vakhnianyna.addEventListener("click", function(){
+      showMarker('vakhnianyna');
+    });
+    dudaeva.addEventListener("click", function(){
+      showMarker('dudaeva');
+    });
+    function showMarker(markerName) {
+      for (var i = 0; i < markers.length; i++) {
+        // console.log(markers[i]); 
+        markers[i].setMap(null);
+        if(markers[i].title == markerName) {
+          console.log(markers[i].title);
+          markers[i].setMap(map);
+        }
+      }
+    }
 
+    function initMap() {
+      var bounds  = new google.maps.LatLngBounds();
+      var locations = [
+        ['pogulanka', 49.825870, 23.971553],
+        ['vakhnianyna', 49.811748, 24.038954],
+        ['dudaeva', 49.833025, 24.024031],
+      ];
+      map = new google.maps.Map(document.getElementsByClassName('js-cr-map')[0], {
+        disableDefaultUI: true,
+        center: {lat: 0, lng: 0},
+        zoom: 15
+      });
+      for (var i in locations) {
+        var position = new google.maps.LatLng(locations[i][1], locations[i][2]);
+        bounds.extend(position);
+        var marker = new google.maps.Marker({
+          position: position,
+          map: map,
+          title: locations[i][0]
+        });
+        markers.push(marker)
+      }
+      map.panToBounds(bounds);
+      map.fitBounds(bounds);
+      showMarker('pogulanka');
+    }
+
+  </script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVTcBwJMTXFz3mOnx21ghxp7TqzO2Mm9U&callback=initMap"></script>
   <script src="./dist/index.bundle.js"></script>
 </body>
 </html>
