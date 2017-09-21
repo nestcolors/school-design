@@ -1,5 +1,5 @@
 import $ from "jquery";
-
+// import gm123 from "./google-maps.js";
 
 const homePage = () => {
   var main_menu = $("#js-main-menu");
@@ -34,14 +34,22 @@ const homePage = () => {
       }
   });
 
-  var close_mobile_menu = header.find(".cr-close-btn");
-  close_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').fadeOut().addClass('mod-mobile-menu-closed');
-  });
-  var open_mobile_menu = header.find(".cr-burger-btn");
-  open_mobile_menu.click(function(event) {
-    header.find('.cr-header__fixed-part').fadeIn().removeClass('mod-mobile-menu-closed');
-  });
+  // var close_mobile_menu = header.find(".cr-close-btn");
+  // close_mobile_menu.click(function(event) {
+  //   header.find('.cr-header__fixed-part').fadeOut().toggleClass('mod-mobile-menu-closed');
+  //       header.toggleClass('mod-mobile-opened');
+  // });
+  // var open_mobile_menu = header.find(".cr-burger-btn");
+  // open_mobile_menu.click(function(event) {
+  //   header.find('.cr-header__fixed-part').fadeIn().toggleClass('mod-mobile-menu-closed');
+  //   header.toggleClass('mod-mobile-opened');
+  // });
+
+  // var mobile_burger_btn =  header.find(".cr-burger-btn");
+  // mobile_burger_btn.click(function(event) {
+  //   // header.find('.cr-header__fixed-part').toggleClass('mod-mobile-menu-closed');
+  //   header.toggleClass('mod-mobile-opened');
+  // });
 
   $('.cr-hero-slider').slick({
     dots: true,
@@ -57,6 +65,8 @@ const homePage = () => {
     $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
   });
 
+
 }
+
 
 export default homePage;

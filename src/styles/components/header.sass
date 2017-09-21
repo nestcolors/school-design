@@ -94,10 +94,16 @@ to {transform: translateY(0px); opacity: 1;}
   @include media(to_tablet)
     z-index: 1
     position: fixed
-    top: 0
+    top: 45px
     width: 100%
     min-height: 100%
     background-color: rgba(8, 8, 8, 0.8)
+    transform: translate(0, 100%)
+    opacity: 0
+    transition: all .3s
+    .mod-mobile-opened &
+      transform: translate(0);
+      opacity: 1
     .cr-header__link
       color: #fff
       font-size: 14px
@@ -116,9 +122,11 @@ to {transform: translateY(0px); opacity: 1;}
     position: fixed
     top: 0
     z-index: 999
-  &.mod-mobile-menu-closed
     @include media(to_tablet)
-      display: none
+      top: 45px
+  // &.mod-mobile-menu-closed
+  //   @include media(to_tablet)
+  //     display: none
 
 .cr-header__logo
   position: absolute
@@ -154,14 +162,14 @@ body
 
 .cr-header__mobile
   position: relative
-  .cr-header__logo
-    width: 89px
-    @include media(mobile)
-      top: 0
-    img
-      height: 20px
-      max-width: 100%
-      margin-top: 0px
+  // .cr-header__logo
+  //   width: 89px
+  //   @include media(mobile)
+  //     top: 0
+  //   img
+  //     height: 20px
+  //     max-width: 100%
+  //     margin-top: 0px
 .cr-burger-btn
   position: absolute
   width: 40px
@@ -177,5 +185,16 @@ body
     position: absolute
     left: 10px
     top: 20px
+    transform: rotate(0)
+    transition: transform .3s
   &:after
     top: 25px
+  .cr-header.mod-mobile-opened &
+    &:after
+      // transition: transform .3s
+      top: 25px
+      transform: rotate(-45deg)
+    &:before
+      // transition: transform .3s
+      top: 25px
+      transform: rotate(45deg)
