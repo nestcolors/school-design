@@ -80,6 +80,6 @@ const aboutUsPage = () => {
       dots: false,
     })
   });
-  
+}
 
 export default aboutUsPage;
