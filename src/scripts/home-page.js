@@ -52,6 +52,15 @@ const homePage = () => {
     fade: true,
   });
 
+  $('.cr-mobile-hero-slider').slick({
+    dots: true,
+    arrows: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    fade: true,
+  });
+
   $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
   $('.cr-hero-slider').on('afterChange', function(event, slick, currentSlide){
     $('.cr-hero-slider .slick-slide.slick-current video')[0].play();
