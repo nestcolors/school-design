@@ -31,13 +31,18 @@ const homePage = () => {
   var header_fixed_part = header.find('.cr-header__fixed-part');
   var motto_height = header.find('.cr-header__motto').outerHeight();
 
-  if ($(window).scrollTop() > 400) {
+  var menuWrapperHeightHandler = 100;
+  if (window.innerWidth > 1650) {
+    menuWrapperHeightHandler = 400;
+  }
+
+  if ($(window).scrollTop() > menuWrapperHeightHandler) {
     $('.cr-main-menu-wrapper').fadeOut(0);
   }
 
   $(window).scroll(function (event) {
       var scroll = $(window).scrollTop();
-      if (scroll > 450) {
+      if (scroll > menuWrapperHeightHandler) {
         $('.cr-main-menu-wrapper').fadeOut();
       } else {
         $('.cr-main-menu-wrapper').fadeIn();

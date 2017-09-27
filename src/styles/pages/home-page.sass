@@ -5,8 +5,14 @@
   margin-top: 110px
   z-index: 0
   overflow: hidden
-  overflow: hidden
   position: relative
+  // margin: 110px auto 0
+  @include media(wide)
+    height: 600px
+  @include media(swide)
+    height: 680px
+  @include media(xwide)
+    height: 820px
   @include media(to_tablet)
     margin-top: 0px
   @include media(mobile)
@@ -15,27 +21,28 @@
     img
       width: 100%
   .cr-hero-slider
-    @include media(wide)
-      height: 800px
-    @include media(xwide)
-      height: 1000px
-    .slick-dots
-    .slick-arrow
-      transform: none
-      width: 50vw
-      top: 0
-      background-color: rgba(0,0,0,0.01)
-      z-index: 4
+    position: absolute
+    right: 0
+    top: 30px
+    .slick-list
       @include media(wide)
-        height: 770px
+        height: 480px
+        width: 1000px
+      @include media(swide)
+        height: 600px
+        width: 1000px
       @include media(xwide)
-        height: 1090px
+        height: 750px
+        width: 1500px
+    .slick-dots
+      bottom: -35px
+    .slick-arrow
+      bottom: -35px
+      z-index: 4
     .slick-prev
-      left: 0px
-      cursor: url(~/src/images/icons/prev.svg), auto
+      right: 60px
     .slick-next
-      right: 0px
-      cursor: url(~/src/images/icons/next.svg), auto
+      right: 25px
   .cr-mobile-home-hero
     height: 330px
     .slick-dots
@@ -63,8 +70,30 @@
     display: block
     width: 230px
     bottom: 0px
+  .social-container
+    position: absolute
+    left: 20px
+    @include media(wide)
+      bottom: 90px
+    @include media(swide)
+      bottom: 90px
+    @include media(xwide)
+      bottom: 40px
+    ul
+      list-style-type:  none
+      li
+        float: left
+        margin-right: 20px
+        a
+          width: 20px
+          padding: 2px 5px
+          border: 1px solid $black
+          color: $black
+          &:hover
+            background-color: $black
+            color: $white
 .cr-hero-video
-  width: 100vw
+  // width: 100vw
   // @include media(mobile)
   //   width: auto
   //   height: 309px
@@ -122,9 +151,9 @@
   @include media(mobile)
     float: none !important
 
-  .cr-hero-slider
+.cr-hero-slider
+  display: block
+  .slick-track
     display: block
-    .slick-track
-      display: block
-      video
-        width: 100%
+    video
+      width: 100%
