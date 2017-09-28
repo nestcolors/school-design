@@ -56,7 +56,7 @@
 	.courses-list-page
 		background-color: $white
 		padding: 10px 15px 40px
-		min-height: 500px
+		min-height: 100vh
 	.cta
 		margin-top: 12px
 		a
@@ -83,61 +83,52 @@
 			border: 2px solid $dark
 			background-color: $dark
 	.box
-		margin-bottom:
+		margin-top: 35px
 		@include media(to_tablet)
 			margin-bottom: 40px
 		@include media(mobile)
 			margin-bottom: 10px
-	.mode-border-bottom
+		.cr-button
+			top: 0
+	.cr-collection
 		border-bottom: 5px solid $mint
+		.course-level-normal
+			background-color: $mint
+			color: $black
+	.course-level-normal
+		background-color: $white
+		border: 1px solid $mint
+		color: $mint
+	.course-level-intensive
+		background-color: $yellow
+		color: $black
+		border: 0px solid white
+	.course-level
+		padding: 2px 6px
+	.mode-button
+		&:before
+			position: absolute
+			top: -42px
+			font-size: 18px
+			background-color: $black
+			color: $white
+			font-family: $semibold
+			padding: 8px 19px
+			right: -2px
+			letter-spacing: 1.6px
+			@include media(mobile)
+				top: 0
+				padding: 5px 10px
+				margin: 10px
 	.mode-sale
 		&:before
 			content: "SALE"
-			position: absolute
-			top: -42px
-			font-size: 18px
-			background-color: $mint
-			color: $white
-			font-family: $semibold
-			padding: 8px 19px
-			left: 0
-			letter-spacing: 1.6px
-			@include media(mobile)
-				top: 0
-				padding: 5px 10px
-				margin: 10px
 	.mode-new
 		&:before
 			content: "NEW"
-			position: absolute
-			top: -42px
-			font-size: 18px
-			background-color: $mint
-			color: $white
-			font-family: $semibold
-			padding: 8px 19px
-			left: 0
-			letter-spacing: 1.6px
-			@include media(mobile)
-				top: 0
-				padding: 5px 10px
-				margin: 10px
 	.mode-best-prise
 		&:before
 			content: "BEST PRISE"
-			position: absolute
-			top: -42px
-			font-size: 18px
-			background-color: $mint
-			color: $white
-			font-family: $semibold
-			padding: 8px 19px
-			left: 0
-			letter-spacing: 1.6px
-			@include media(mobile)
-				top: 0
-				padding: 5px 10px
-				margin: 10px
 	.cr-courses__chose-level
 		@include media(mobile)
 			position: absolute
