@@ -80,6 +80,51 @@ const aboutUsPage = () => {
       dots: false,
     })
   });
+
+
+  // PARALAX
+  var paralaxElements = $(".js-paralax-effect");
+  var paralaxContainer = $(".js-paralax-container");
+  var scrollingDown = true;
+  var topScrollposition = 0;
+  // SCROLLING DIRECTIONS
+  $(window).bind('scroll', function(event) {
+      if (topScrollposition >= $(document).scrollTop().valueOf()) {
+          scrollingDown = false;
+          topScrollposition = $(document).scrollTop().valueOf();
+      }
+      else {
+          scrollingDown = true;
+          topScrollposition = $(document).scrollTop().valueOf();
+      }
+  });
+
+
+  // CHECK VISIBILITY OF OBJECT
+  function elementInViewport(el) {
+    var top = $(el).offset().top;
+    var height = el.offsetHeight;
+    return (
+      window.pageYOffset < top &&
+      (top + height) > window.pageYOffset
+    );
+  }
+
+  // ADDING PARALAX EFFECT TO ALL ELEMENTS
+  paralaxElements.each(function(element) {
+    var that = this;
+    var translateDefault = 0;
+    $(window).scroll(function(event) {
+      if(elementInViewport(paralaxElements[element]) && scrollingDown) {
+        translateDefault += 1;
+        $(that).css('transform', 'translate(0,'+translateDefault+'px)');
+      }
+      if(elementInViewport(paralaxElements[element]) && !scrollingDown) {
+        translateDefault -= 1;
+        $(that).css('transform', 'translate(0,'+translateDefault+'px)');
+      }
+    });
+  });
 }
 
 export default aboutUsPage;
