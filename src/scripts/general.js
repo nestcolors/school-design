@@ -27,6 +27,12 @@ const general = () => {
     $('.cr-sublist-container > ul').fadeOut();
   });
 
+  $('.js-popup-container').hover((i) => {
+    $('.js-popup-container > .cr-header-popup').fadeIn(0);
+    $('.js-popup-container > .cr-header-popup').addClass('show-header-popup');
+  }, (i) => {
+    $('.js-popup-container > .cr-header-popup').fadeOut();
+  });
   /*
   on hover show list
   */

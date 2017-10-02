@@ -83,8 +83,10 @@ const aboutUsPage = () => {
 
 
   // PARALAX
-  var paralaxElements = $(".js-paralax-effect");
-  var paralaxContainer = $(".js-paralax-container");
+  // var paralaxElements = $(".js-paralax-effect");
+  var paralaxElements = $(".js-paralax-container");
+  // console.log("paralaxElements", paralaxElements); 
+  // console.log($(paralaxElements).find(".js-paralax-effect")); 
   var scrollingDown = true;
   var topScrollposition = 0;
   // SCROLLING DIRECTIONS
@@ -101,27 +103,48 @@ const aboutUsPage = () => {
 
 
   // CHECK VISIBILITY OF OBJECT
-  function elementInViewport(el) {
-    var top = $(el).offset().top;
-    var height = el.offsetHeight;
+  function elementInViewport(paralaxContainer) {
+    var paralaxElement = $(paralaxContainer).find(".js-paralax-effect");
+    // console.log('paralaxContainer', paralaxContainer); 
+    var top = $(paralaxElement).offset().top;
+    var height = $(paralaxElement).outerHeight();
+    // console.log('top', top); 
     return (
       window.pageYOffset < top &&
       (top + height) > window.pageYOffset
     );
   }
 
+  function elementInContainer(paralaxContainer) {
+    var paralaxTopStop = $(paralaxContainer).find('.js-paralax-top-stop');
+    var paralaxElement = $(paralaxContainer).find(".js-paralax-effect");
+    var top = $(paralaxElement).offset().top;
+    var height = $(paralaxElement).outerHeight();;
+    var containerHeight = $(paralaxElement).outerHeight();
+    return (
+      top > paralaxTopStop.offset().top &&
+      (top + height) < containerHeight
+    );
+  }
   // ADDING PARALAX EFFECT TO ALL ELEMENTS
-  paralaxElements.each(function(element) {
-    var that = this;
+  paralaxElements.each(function(index) {
+    var element = $(this).find('.js-paralax-effect');
+    // console.log("container", $(this));
+    // console.log("element", element);  
+    // var that = this ;
     var translateDefault = 0;
+
     $(window).scroll(function(event) {
-      if(elementInViewport(paralaxElements[element]) && scrollingDown) {
+    // console.log(contai ner);
+    console.log("elementInViewport", elementInViewport(paralaxElements[index])); 
+    console.log("elementInContainer", elementInContainer(paralaxElements[index])); 
+      if(elementInViewport(paralaxElements[index]) && scrollingDown) {
         translateDefault += 1;
-        $(that).css('transform', 'translate(0,'+translateDefault+'px)');
+        $(element).css('transform', 'translate(0,'+translateDefault+'px)');
       }
-      if(elementInViewport(paralaxElements[element]) && !scrollingDown) {
+      if(elementInViewport(paralaxElements[index]) && !scrollingDown) {
         translateDefault -= 1;
-        $(that).css('transform', 'translate(0,'+translateDefault+'px)');
+        $(element).css('transform', 'translate(0,'+translateDefault+'px)');
       }
     });
   });
