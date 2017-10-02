@@ -63,12 +63,6 @@ const general = () => {
     header.toggleClass('mod-mobile-opened');
   });
 
-  // $('document').ready(() => {
-  //   $('.cr-header, .cr-header__fixed-part').css(
-  //     'width', window.innerWidth
-  //   )
-  //   console.log('window.innerWidth', window.innerWidth);
-  // })
 }
 
 export default general;
