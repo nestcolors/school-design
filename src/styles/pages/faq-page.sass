@@ -1,9 +1,6 @@
 .cr-faq-modal
-  margin-top: 30px
-  padding-top: 25px
-  padding-bottom: 75px
-  background-color: #fbf7f6
-  margin-top: 60px
+  padding-top: 60px
+  padding-bottom: 50px
   .row + .row
     margin-top: 55px
 .cr-faq-row-caption
@@ -12,6 +9,8 @@
   color: #080808
   font-family: $bold
   position: relative
+  @include media(to_tablet)
+    padding-left: 30px
   &:after
     content: ""
     width: 50px
@@ -20,11 +19,17 @@
     bottom: -30px
     position: absolute
     left: 130px
+    @include media(to_tablet)
+      display: none
 .cr-faq-row-answer
   font-size: 14px
   padding-left: 95px
   padding-right: 115px
   margin-top: 0
+  @include media(to_tablet)
+    padding-left: 30px
+  @include media(mobile)
+    padding-right: 20px
 
 .cr-faq-modal__header
   padding-left: 15px

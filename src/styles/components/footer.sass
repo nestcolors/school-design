@@ -16,7 +16,9 @@
     float: right
     @include media(mobile)
      float: none !important
-
+  .cr-social-list__item
+    & + .cr-social-list__item
+      margin-left: 25px
 .cr-social-list
   margin: 0
   padding: 0
