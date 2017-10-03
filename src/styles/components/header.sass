@@ -53,7 +53,7 @@ to {transform: translateY(0px); opacity: 1;}
     li.cr-horizontal-list__item
       position: relative
     li.cr-horizontal-list__item.cr-sublist-container
-      .cr-header__link
+      & > .cr-header__link
         &.mod-active:after
           border-color: $mint
         &:after
@@ -198,3 +198,50 @@ body
       // transition: transform .3s
       top: 25px
       transform: rotate(45deg)
+
+.cr-header-popup
+  width: 430px
+  padding: 42px 27px 17px 22px
+  position: absolute
+  top: 100%
+  background-color: #fff
+  right: 0
+  display: none
+  &.show-header-popup
+    display: block
+    animation: appear-list
+    animation-duration: 0.15s
+
+
+.cr-contacts
+  text-align: right
+  font-family: $regular
+  hr
+    margin-top: 10px
+    margin-bottom: 10px
+    border-color: #979797
+  .cr-social-list__item
+    & + .cr-social-list__item
+      margin-left: 25px
+.cr-contacts--location
+  font-size: 14px
+.cr-contacts--address
+  color: $black
+  font-size: 18px
+  font-family: $bold
+.cr-contacts--working-hour
+  font-size: 14px
+  margin-top: 30px
+  font-family: $regular
+.cr-contacts--phone
+  font-size: 18px
+  font-family: $bold
+  margin-bottom: 20px
+  color: $black
+.cr-contacts--phone-separator
+  display: inline-block
+  height: 13px
+  vertical-align: middle
+  border-right: solid 1px #979797
+.cr-contacts--email
+  font-size: 16px

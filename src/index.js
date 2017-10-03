@@ -4,6 +4,7 @@ import aboutUsPage from './scripts/about-us-page.js';
 import aboutCoursePage from './scripts/about-course-page.js';
 import spaces from './scripts/spaces.js';
 import general from './scripts/general.js';
+import faqPage from './scripts/faq-page.js';
 require('./styles/style.sass');
 
 general();
@@ -15,9 +16,11 @@ if (window.location.pathname === '/courses-list.html') {
   homePage();
 } else if (window.location.pathname === '/about-us-page.html') {
   aboutUsPage();
+}else if (window.location.pathname === '/faq.html') {
+  faqPage();
 }else if (window.location.pathname === '/about-course-page.html') {
   aboutCoursePage();
-  aboutUsPage();
+  // aboutUsPage();
 }else if (window.location.pathname === '/spaces.html') {
   spaces();
 } else {
