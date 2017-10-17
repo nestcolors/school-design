@@ -48,6 +48,44 @@ to {transform: translateY(0px); opacity: 1;}
     display: none
 
 .cr-header__fixed-part
+  background-color: #FFF
+  border-bottom: 4px solid $dark
+  height: 65px
+  position: relative
+  width: 100%
+  @include media(to_tablet)
+    z-index: 1
+    position: fixed
+    top: 45px
+    width: 100%
+    min-height: 100%
+    background-color: rgba(8, 8, 8, 0.8)
+    transform: translate(0, 100%)
+    opacity: 0
+    transition: all .2s
+    .mod-mobile-opened &
+      transform: translate(0)
+      opacity: 1
+    .cr-header__link
+      color: #fff
+      font-size: 14px
+      display: block
+      padding: 10px 40px
+      &:hover, &.mod-active
+        border: none
+    .cr-horizontal-list
+      float: none !important
+      margin-top: 80px
+    .cr-horizontal-list__item
+      & + .cr-horizontal-list__item
+        display: block
+        margin-left: 0
+  &.mod-fixed
+    position: fixed
+    top: 0
+    z-index: 999
+    @include media(to_tablet)
+      top: 45px
   .cr-horizontal-list
     position: relative
     li.cr-horizontal-list__item
@@ -85,45 +123,7 @@ to {transform: translateY(0px); opacity: 1;}
       display: block
       animation: appear-list
       animation-duration: 0.15s
-.cr-header__fixed-part
-  background-color: #FFF
-  border-bottom: 4px solid $dark
-  height: 65px
-  position: relative
-  width: 100%
-  @include media(to_tablet)
-    z-index: 1
-    position: fixed
-    top: 45px
-    width: 100%
-    min-height: 100%
-    background-color: rgba(8, 8, 8, 0.8)
-    transform: translate(0, 200px)
-    opacity: 0
-    transition: all .2s
-    .mod-mobile-opened &
-      transform: translate(0)
-      opacity: 1
-    .cr-header__link
-      color: #fff
-      font-size: 14px
-      display: block
-      padding: 10px 40px
-      &:hover, &.mod-active
-        border: none
-    .cr-horizontal-list
-      float: none !important
-      margin-top: 80px
-    .cr-horizontal-list__item
-      & + .cr-horizontal-list__item
-        display: block
-        margin-left: 0
-  &.mod-fixed
-    position: fixed
-    top: 0
-    z-index: 999
-    @include media(to_tablet)
-      top: 45px
+
   // &.mod-mobile-menu-closed
   //   @include media(to_tablet)
   //     display: none
@@ -246,3 +246,40 @@ body
   border-right: solid 1px #979797
 .cr-contacts--email
   font-size: 16px
+  &:hover
+    color: $mint
+
+.cr-mobile-menu-wrapper
+  .cr-social-list
+    margin-top: 0
+    left: auto
+    margin-bottom: 40px
+  .cr-vertical-list
+    display: block
+    text-align: center
+    width: 100%
+    color: $white
+    font-family: $bold
+    font-size: 16px
+    margin: 45px 0
+    list-style: none
+    padding: 0
+    &:first-child
+      margin-bottom: 40px
+  .cr-vertical-list__item
+    padding: 10px 0
+    text-transform: uppercase
+    a
+      color: $white
+      &:hover
+        color: #fff
+  hr
+    border-color: #fff
+  .cr-contacts--phone-separato
+    border-color: #fff
+  .cr-contacts--address
+    font-size: 16px
+    color: #fff
+  .cr-contacts--phone
+    margin: 10px 0
+    color: #fff

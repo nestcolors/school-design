@@ -105,6 +105,8 @@
   left: 0
   margin: 0
   padding: 10px 50px
+  .cr-button
+    display: inline-block
   .back-to
     margin-top: 10px
   @include media(mobile)
@@ -113,10 +115,14 @@
       margin-top: 10px
     .cr-button
       padding-right: 20px
+      display: inline-block
       &::after, &::before
         display: none
     .back-to
       margin-top: 0px
+      .cr-back-link
+        margin-top: 8px
+        display: block
 .cr-two-columns
   font-size: 18px
   line-height: 1.28
@@ -205,7 +211,7 @@
   width: 188px
   margin: 0 auto
 .row.cr-course-block__footer
-  @include media(mobile)
+  @include media(to_tablet)
     .register-link
       width: 250px
       margin: 20px auto
