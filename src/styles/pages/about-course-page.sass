@@ -214,8 +214,18 @@
   @include media(to_tablet)
     .register-link
       width: 250px
-      margin: 20px auto
+      margin: 0 auto
       display: block
+  @include media(mobile)
+    .cr-back-link
+      &:before, &:after
+        display: none
+    .cr-info-row
+      display: block
+      width: 205px
+      margin: 0 auto
+      float: none
+      margin-top: 10px
 .cr-courses-slider
   .mode-gray
     background: $black
@@ -270,3 +280,21 @@
       opacity: 1
       width: 80%
       margin: 0 auto
+.cr-info-row
+  color: $light_gray
+  position: relative
+  margin-top: 10px
+  float: right
+  &:before
+    position: absolute
+    content: 'i'
+    padding: 5px
+    border: 1px solid #929292
+    border-radius: 50%
+    left: -27px
+    width: 15px
+    height: 15px
+    line-height: 5px
+    text-align: center
+    font-size: 11px
+    top: 2px
